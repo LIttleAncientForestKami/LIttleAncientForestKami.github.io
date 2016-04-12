@@ -1,0 +1,18 @@
+= LIttle Ancient Forest
+:author: Tomasz Borek 
+:email: (http://twitter.com/LAFK_pl)@LAFK_pl
+:toc: preamble
+:toc-title: You can find here
+:hardbreaks:
+:icons: font
+:imagesdir: ./img/
+:docinfo:
+:source-highlighter: highlightjs
+
+a kami dwelling
+
+== About me
+
+image::lafk_pl.png[]
+
+
