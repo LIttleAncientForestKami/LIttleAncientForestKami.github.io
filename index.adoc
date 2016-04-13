@@ -1,6 +1,6 @@
 = LIttle Ancient Forest
 :author: Tomasz Borek 
-:email: (http://twitter.com/LAFK_pl)@LAFK_pl
+:email: http://twitter.com/LAFK_pl[@LAFK_pl]
 :toc: preamble
 :toc-title: You can find here
 :hardbreaks:
