@@ -13,6 +13,8 @@ a kami dwelling
 
 == About me
 
-image::lafk_pl.png[]
+TIP: https://lafkblogs.wordpress.com/about/mitoridafi/[Mitoridafi] is my own company.
 
+image::LAFK_pl.png[]
 
+image::LAFK_pl_wSieci.png[]
