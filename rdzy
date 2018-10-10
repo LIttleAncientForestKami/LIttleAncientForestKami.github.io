@@ -1,0 +1,74 @@
+# Vim do HTMLa
+
+closetag
+https://github.com/alvan/vim-closetag
+
+naucz się otaczania: cit, dit, ci' itp
+http://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/ 
+
+https://www.vim.org/scripts/script.php?script_id=2981
+https://emmet.io/
+
+http://vim.wikia.com/wiki/Preview_current_HTML_file
+http://vim.wikia.com/wiki/Cleanup_your_HTML
+
+inne pomysły
+https://www.reddit.com/r/vim/comments/5xu0ca/writing_html_is_painful/ 
+https://stackoverflow.com/questions/5942373/how-to-edit-html-in-vim
+
+## a CSS?
+
+?
+
+# Responsywność
+
+file:///home/tammo/Kod/LIttleAncientForestKami.github.io/katalogSzkole%C5%84.html 
+
+Ctrl+Shift+M
+- notuj problem
+- popraw problem
+- i tak do momentu, kiedy mały ekran jest OK, przetestuj na fonach i apiati
+
+## Problem z PRZED i PO?
+
+https://wpguru.co.uk/2014/03/how-to-replace-and-add-html-text-elements-with-css/
+https://blog.escapecreative.com/how-to-replace-text-with-css/
+
+# Udoskonal na bazie 
+
+## Czyszczenia HTMLa
+
+http://vim.wikia.com/wiki/Cleanup_your_HTML via tidy
+albo wrzuć html do sprawdzacza w sieci, np. W3C i popraw co wyjdzie
+
+## Nowości w CSS 3
+
+Przeglądnij https://tutorialzine.com/2013/10/12-awesome-css3-features-you-can-finally-use bo artykuł się bardzo przydał i przynajmniej weź z niego jeszcze:
+
+1. czcionki
+2. style dla paragrafów (pierwsza litera, linia, ostatnia linia)
+
+Być może: 
+http://webreference.com/authoring/css3/2.html
+
+## Obrazek dla mini-kart
+
+https://codeburst.io/html5-and-css3-features-3064a248fada
+
+patrz pod border-image
+
+## Kolumny
+
+http://learnlayout.com/column.html
+
+## Jeśli siatka
+
+to tutaj:
+https://medium.com/deemaze-software/css-grid-responsive-layouts-and-components-eee1badd5a2f
+https://medium.com/deemaze-software/css-grid-layout-crossed-sections-fca9e956e725
+
+
+# JS?
+
+https://css-tricks.com/swapping-out-text-five-different-ways/
+

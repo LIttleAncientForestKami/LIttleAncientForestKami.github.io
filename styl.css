@@ -1,0 +1,56 @@
+/* so border and padding won't increase element length */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header::after {
+    content: "each of those can be done in English, English site version will be up soon";
+}
+
+section.wyróżnione {
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+section.wyróżnione > article.mini-karta-szkolenia:hover::before {
+    opacity: 1;
+}
+
+
+/* miejsce na wyróżniki szkolenia */
+section.wyróżnione > article.mini-karta-szkolenia::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    content: attr(data-title);
+    color: #666;
+    /* animacja */
+    opacity: 0;
+    transition: opacity 0.4s;   
+}
+
+.mini-karta-szkolenia {
+    border: solid;
+    border-color: green;
+    border-style: double;
+    width: 33%;
+    max-width: 33%;
+    display:inline-block; 
+    background: linear-gradient(#7192cb, #b4c82a);
+}
+
+
+/* szary kawałek z mejlem czy innym kontaktem */
+.kontakt {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    background-color: grey;
+}
+
