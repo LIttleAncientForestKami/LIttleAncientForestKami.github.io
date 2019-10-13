@@ -5,7 +5,7 @@
 :toc-title: You can find here
 :hardbreaks:
 :icons: font
-:imagesdir: ./img/
+:imagesdir: ./Prezki/img/
 :docinfo:
 :source-highlighter: highlightjs
 
