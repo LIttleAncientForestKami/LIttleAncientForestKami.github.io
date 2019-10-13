@@ -11,6 +11,13 @@
 
 a kami dwelling
 
+== My presos
+
+. http://lafk.pl/Prezki/TDD.html[TDD]
+. http://lafk.pl/Prezki/TDD.html[DDD] for Brainly Camp 2019
+. http://lafk.pl/Prezki/SoftwareCraftsmanship.html[Software Craftsmanship] for Brainly Camp 2019
+. http://lafk.pl/Prezki/ZmianaPracy.html[O zmianie pracy z obu stron barykady] dla JDD 2019
+
 == About me
 
 TIP: https://lafkblogs.wordpress.com/about/mitoridafi/[Mitoridafi] is my own company.
