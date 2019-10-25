@@ -1,0 +1,3933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.7.1">
+<meta name="author" content="Tomasz Borek, @LAFK pl,">
+<title>Cyberteatr</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
+/* Uncomment @import statement below to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+script{display:none!important}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:transparent}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:none}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #ddddd8;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite::before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
+pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #ddddd8}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #ddddd8;padding-bottom:8px}
+#header .details{border-bottom:1px solid #ddddd8;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #ddddd8;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #efefed;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #efefed;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background-color:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #efefed}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock pre:not(.highlight),.listingblock pre[class="highlight"],.listingblock pre[class^="highlight "],.listingblock pre.CodeRay,.listingblock pre.prettyprint{background:#f7f7f8}
+.sidebarblock .literalblock pre,.sidebarblock .listingblock pre:not(.highlight),.sidebarblock .listingblock pre[class="highlight"],.sidebarblock .listingblock pre[class^="highlight "],.sidebarblock .listingblock pre.CodeRay,.sidebarblock .listingblock pre.prettyprint{background:#f2f1f1}
+.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;padding:1em;font-size:.8125em}
+.literalblock pre.nowrap,.literalblock pre[class].nowrap,.listingblock pre.nowrap,.listingblock pre[class].nowrap{overflow-x:auto;white-space:pre;word-wrap:normal}
+@media screen and (min-width:768px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:1em}}
+.literalblock.output pre{color:#f7f7f8;background-color:rgba(0,0,0,.9)}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:#999}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:#999}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+table.pyhltable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.pyhltable td{vertical-align:top;padding-top:0;padding-bottom:0;line-height:1.45}
+table.pyhltable td.code{padding-left:.75em;padding-right:0}
+pre.pygments .lineno,table.pyhltable td:not(.code){color:#999;padding-left:0;padding-right:.5em;border-right:1px solid #ddddd8}
+pre.pygments .lineno{display:inline-block;margin-right:.25em}
+table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock blockquote p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.5em;margin-right:.5ex;text-align:right}
+.quoteblock .quoteblock{margin-left:0;margin-right:0;padding:.5em 0;border-left:3px solid rgba(0,0,0,.6)}
+.quoteblock .quoteblock blockquote{padding:0 0 0 .75em}
+.quoteblock .quoteblock blockquote::before{display:none}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.abstract blockquote,.quoteblock.abstract blockquote p{word-spacing:0;line-height:1.6}
+.quoteblock.abstract blockquote::before,.quoteblock.abstract p::before{display:none}
+table.tableblock{max-width:100%;border-collapse:separate}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd){background:#f8f8f7}
+table.stripes-none tr,table.stripes-odd tr:nth-of-type(even){background:none}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+td>div.verse{white-space:pre}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
+.imageblock.right,.imageblock[style*="float: right"]{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background-color:#00fafa}
+.black{color:#000}
+.black-background{background-color:#000}
+.blue{color:#0000bf}
+.blue-background{background-color:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background-color:#fa00fa}
+.gray{color:#606060}
+.gray-background{background-color:#7d7d7d}
+.green{color:#006000}
+.green-background{background-color:#007d00}
+.lime{color:#00bf00}
+.lime-background{background-color:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background-color:#7d0000}
+.navy{color:#000060}
+.navy-background{background-color:#00007d}
+.olive{color:#606000}
+.olive-background{background-color:#7d7d00}
+.purple{color:#600060}
+.purple-background{background-color:#7d007d}
+.red{color:#bf0000}
+.red-background{background-color:#fa0000}
+.silver{color:#909090}
+.silver-background{background-color:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background-color:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background-color:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background-color:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background-color:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background-color:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #ddddd8!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Cyberteatr</h1>
+<div class="details">
+<span id="author" class="author">Tomasz Borek, @LAFK pl,</span><br>
+<span id="email" class="email"><a href="http://lafkblogs.wordpress.com" class="bare">http://lafkblogs.wordpress.com</a></span><br>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cyberteatr, hasła i ich łamanie, najczęstsze (i często podstawowe) ataki i zabezpieczenia.</p>
+</div>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Spis treści</div>
+<ul class="sectlevel2">
+<li><a href="#_o_mnie">O mnie</a></li>
+<li><a href="#_ja_w_sieci">Ja w sieci</a></li>
+<li><a href="#_zwykłe_zlecenia">Zwykłe zlecenia</a></li>
+<li><a href="#_pytania">Pytania?</a></li>
+<li><a href="#_teatr_a_nie_bezpieczeństwo">Teatr a nie bezpieczeństwo</a></li>
+<li><a href="#_antywirusy">Antywirusy?</a>
+<ul class="sectlevel2">
+<li><a href="#_internet_śmieci">Internet Śmieci</a></li>
+<li><a href="#_a_ile_z_tych_zabawek_w_ogóle_ma_hasła">A ile z tych zabawek w ogóle MA hasła?</a></li>
+<li><a href="#_ćwiczenie">Ćwiczenie</a></li>
+<li><a href="#_dobre_źródło">Dobre źródło</a></li>
+<li><a href="#_czy_wspomniałem_o_czajnikach">Czy wspomniałem o czajnikach?</a></li>
+<li><a href="#_serwery">Serwery!</a></li>
+<li><a href="#_nie_znajdą_mnie">Nie znajdą mnie</a></li>
+<li><a href="#_mówię_nie_znajdą_mnie_schowam_się">Mówię: nie znajdą mnie, schowam się!</a></li>
+<li><a href="#_fakty_o_robots_txt">Fakty o <code>robots.txt</code></a></li>
+<li><a href="#_sekcje_robots_txt">Sekcje <code>robots.txt</code></a></li>
+<li><a href="#_ćwiczenie_2">Ćwiczenie</a></li>
+<li><a href="#_źródła_by_się_nauczyć">Źródła by się nauczyć</a></li>
+<li><a href="#_praktyczne_podejście">Praktyczne podejście</a></li>
+<li><a href="#_może_ja_nie_ogarniam_ale_są_fachowcy">Może ja nie ogarniam, ale są fachowcy!</a></li>
+<li><a href="#_openssl">OpenSSL?</a></li>
+<li><a href="#_heartbleed">Heartbleed</a></li>
+<li><a href="#_ćwiczenie_3">Ćwiczenie</a></li>
+<li><a href="#_libressl">LibreSSL</a></li>
+<li><a href="#_no_dobra_ale_wypadki_chodzą_po_ludziach">No dobra, ale wypadki chodzą po ludziach</a></li>
+</ul>
+</li>
+<li><a href="#_ataki_na_procesory_i_pamięć_p">Ataki na Procesory i Pamięć! :P</a>
+<ul class="sectlevel2">
+<li><a href="#_rowhammer">RowHammer</a></li>
+<li><a href="#_upiór_i_stapianie_spectre_i_meltdown">Upiór i Stapianie - Spectre i Meltdown</a></li>
+<li><a href="#_anc">AnC</a></li>
+<li><a href="#_no_i_oczywiście_nasi_ukochani">No i oczywiście nasi ukochani&#8230;&#8203;</a></li>
+<li><a href="#_a_my_sami">A my sami?</a></li>
+<li><a href="#_rząd_to_rozwiąże">Rząd to rozwiąże?</a></li>
+<li><a href="#_liczy_się_wszystko">Liczy się wszystko</a></li>
+<li><a href="#_liczy_się_wszystko_2">Liczy się wszystko!</a></li>
+<li><a href="#_łańcuch_zabezpieczeń">Łańcuch zabezpieczeń</a></li>
+<li><a href="#_problemów_jest_wiele">Problemów jest wiele</a></li>
+<li><a href="#_podsumowując_wnioski_z_cyberteatru">Podsumowując - wnioski z cyberteatru</a></li>
+<li><a href="#_ale_ja_chcę_bezpieczeństwa">Ale ja chcę bezpieczeństwa!</a></li>
+<li><a href="#_pytania_2">Pytania?</a></li>
+</ul>
+</li>
+<li><a href="#_numerki">Numerki</a>
+<ul class="sectlevel2">
+<li><a href="#_weźmy_taki_owasp">Weźmy taki OWASP</a></li>
+<li><a href="#_white_hat_application">White Hat Application</a></li>
+<li><a href="#_positive_technologies">Positive Technologies</a></li>
+<li><a href="#_duże_i_małe_włamy">Duże i małe włamy</a></li>
+<li><a href="#_internet_śmieci_2">Internet Śmieci</a></li>
+<li><a href="#_komponenty_programu">Komponenty programu?</a></li>
+<li><a href="#_najgroźniejsze_wg_mnie">Najgroźniejsze wg mnie</a></li>
+<li><a href="#_pytania_3">Pytania?</a></li>
+</ul>
+</li>
+<li><a href="#_żargon">Żargon</a>
+<ul class="sectlevel2">
+<li><a href="#_who_will_attack_you">Who will attack you?</a></li>
+<li><a href="#_how_would_they_attack_you">How would they attack you?</a></li>
+<li><a href="#_pytania_4">Pytania?</a></li>
+</ul>
+</li>
+<li><a href="#_dobre_i_złe_hasła_i_praktyki_z_tym_związane">Dobre i złe hasła i praktyki z tym związane</a>
+<ul class="sectlevel2">
+<li><a href="#_eksperyment_arsa_łamanie_haseł">Eksperyment Arsa - łamanie haseł</a></li>
+<li><a href="#_puenta">Puenta?</a></li>
+<li><a href="#_czym_dysponowali">Czym dysponowali?</a></li>
+<li><a href="#_ćwiczenie_4">Ćwiczenie</a></li>
+<li><a href="#_wnioski">Wnioski?</a></li>
+<li><a href="#_z_perspektywy_programisty">Z perspektywy programisty</a></li>
+<li><a href="#_dobre_hasła">Dobre hasła?</a></li>
+<li><a href="#_ćwiczenie_5">Ćwiczenie</a></li>
+<li><a href="#_pytania_5">Pytania?</a></li>
+</ul>
+</li>
+<li><a href="#_rodo">RODO</a>
+<ul class="sectlevel2">
+<li><a href="#_kalendarium">Kalendarium</a></li>
+<li><a href="#_dane_osobowe_czyli">Dane osobowe&#8230;&#8203; czyli?</a></li>
+<li><a href="#_duża_zmiana">Duża zmiana!</a></li>
+<li><a href="#_prawa">Prawa?</a></li>
+<li><a href="#_ochrona_danych_osobowych">Ochrona danych osobowych</a></li>
+<li><a href="#_zmiany">Zmiany</a></li>
+<li><a href="#_pytania_6">Pytania?</a></li>
+</ul>
+</li>
+<li><a href="#_dobre_praktyki">Dobre praktyki</a>
+<ul class="sectlevel2">
+<li><a href="#_ludzie_łamią_dobre_praktyki">Ludzie łamią dobre praktyki</a></li>
+<li><a href="#_najsłabsze_ogniwo">Najsłabsze ogniwo</a></li>
+<li><a href="#_socjotechniki">Socjotechniki</a></li>
+<li><a href="#_problemów_jest_wiele_2">Problemów jest wiele</a></li>
+<li><a href="#_ale_ja_chcę_bezpieczeństwa_2">Ale ja chcę bezpieczeństwa!</a></li>
+<li><a href="#_źródła">Źródła</a></li>
+<li><a href="#_dziękuję">Dziękuję!</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_o_mnie">O mnie</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./img/LAFK_pl.png" alt="LAFK pl">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ja_w_sieci">Ja w sieci</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./img/LAFK_pl_wSieci.png" alt="LAFK pl wSieci">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_zwykłe_zlecenia">Zwykłe zlecenia</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>audyty kodu, infrastruktury, komponentów, systemu</p>
+</li>
+<li>
+<p>testy i audyty wydajności czy bezpieczeństwa</p>
+</li>
+<li>
+<p>wchodzę w bazy danych, GNU/Linuxy, sieci czy bezpiekę</p>
+</li>
+<li>
+<p>programy na zlecenie</p>
+</li>
+<li>
+<p>prelekcje, wykłady tematyczne, warsztaty, szkolenia</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pytania">Pytania?</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./img/question-mark.jpg" alt="question mark">
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_teatr_a_nie_bezpieczeństwo">Teatr a nie bezpieczeństwo</h2>
+<div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+Security Theatre - the practice of investing time and effort into creating an illusion of security, rather than actually doing anything about it
+</blockquote>
+<div class="attribution">
+&#8212; Security Theatre<br>
+<cite>Thomas Shone</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>Wiele rzeczy jakie robimy "w imię bezpieczeństwa" po prostu nie działa.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+My - programiści.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_antywirusy">Antywirusy?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Antywirus umarł,</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>bo żyje crypting.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Crypting można zintegrować z Jenkinsem, niektórzy dają nawet RESTowe API.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>bo twórcy nie są dość dobrzy w zabezpieczeniach</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=693&amp;redir=1">może założy Ci node.js bo są TrendMicro Max Secure</a></p>
+</li>
+<li>
+<p>Albo przy skanie mejli może da się go przejąć, jak <a href="https://lock.cmpxchg8b.com/sophailv2.pdf">Sofosa</a></p>
+</li>
+<li>
+<p><a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=675&amp;redir=1">może dołoży do przeglądarki dodatek&#8230;&#8203; jak AVG</a></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+2016. Styczeń. AVG i Trend. Do tego zauważ, jak szły poprawki, współpraca ze znalazcą i inne oznaki profesjonalizmu
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_internet_śmieci">Internet Śmieci</h3>
+<div class="paragraph">
+<p>czyli</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+Jak sądzisz, ile osób zmienia domyślne hasła w swoich zabawkach?
+</blockquote>
+<div class="attribution">
+&#8212; twórca botnetów<br>
+<cite>do kolegi w chwili Eureka!</cite>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_a_ile_z_tych_zabawek_w_ogóle_ma_hasła">A ile z tych zabawek w ogóle MA hasła?</h3>
+<div class="paragraph">
+<p>Bo przecież "kto by chciał wbić na kamerkę", aparat, zegarek, czujnik, kontroler drzwi do garażu, lodówkę, czajnik&#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ćwiczenie">Ćwiczenie</h3>
+<div class="paragraph">
+<p>Otwórz preferowaną wyszukiwarkę i wpisz zapytania poniżej (lub ekwiwalenty dla szukania w URLu, tytule czy tekście strony):</p>
+</div>
+<div class="paragraph">
+<p><code>inurl:”ViewerFrame?Mode=”</code></p>
+</div>
+<div class="paragraph">
+<p><code>“active webcam page” inurl:8080</code></p>
+</div>
+<div class="paragraph">
+<p><code>intitle:”toshiba network camera – User Login”</code></p>
+</div>
+<div class="paragraph">
+<p><code>intitle:”ivista main page”</code></p>
+</div>
+<div class="paragraph">
+<p><code>intitle:”i-catcher console” “please visit”</code></p>
+</div>
+<div class="paragraph">
+<p><code>camera linksys inurl:main.cgi</code></p>
+</div>
+<div class="paragraph">
+<p>następnie znajdź kamerkę, najlepiej taką, którą można sterować wedle woli.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dobre_źródło">Dobre źródło</h3>
+<div class="paragraph">
+<p><a href="http://members.upc.nl/a.horlings/doc-google.html" class="bare">http://members.upc.nl/a.horlings/doc-google.html</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_czy_wspomniałem_o_czajnikach">Czy wspomniałem o czajnikach?</h3>
+<div class="paragraph">
+<p>Bywają <a href="https://gizmodo.com/a-wi-fi-kettle-that-messages-instead-of-whistling-when-1442484258">podpięte do WiFi</a>, czasem <a href="https://www.theregister.co.uk/2013/10/29/dont_brew_that_cuppa_your_kettle_could_be_a_spambot/">nawet wbrew Tobie</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_serwery">Serwery!</h3>
+<div class="paragraph">
+<p>WAMP, LAMP, XAMP, itp.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Kiedy to składano?</p>
+</li>
+<li>
+<p>Jakie wersje?</p>
+</li>
+<li>
+<p>Uaktualnia to ktoś?</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nie_znajdą_mnie">Nie znajdą mnie</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Nówka serwer, VPS, 5 dni uptime, ile ataków? 90k z /var/log/auth</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>standardowe porty (22, 80, 8080, 3600, 3456, itp.)</p>
+</li>
+<li>
+<p>standardowe konta (user, test, admin, root, demo, mysql, jenkins&#8230;&#8203;)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Google Dorks</p>
+</li>
+<li>
+<p><a href="https://www.shodan.io/search?query=apache+php" class="bare">https://www.shodan.io/search?query=apache+php</a></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mówię_nie_znajdą_mnie_schowam_się">Mówię: nie znajdą mnie, schowam się!</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">REP, Robots Exclusion Protocol </dt>
+<dd>
+<p>protokół do wykluczania treści spod automatycznej indeksacji przez rozmaitej maści roboty</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Użyję <code>robots.txt</code>, by pełzacze mnie ignorowały.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://searchengineland.com/have-you-considered-privacy-issues-when-using-robots-txt-the-robots-meta-tag-149732" class="bare">https://searchengineland.com/have-you-considered-privacy-issues-when-using-robots-txt-the-robots-meta-tag-149732</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fakty_o_robots_txt">Fakty o <code>robots.txt</code></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>część REP</p>
+</li>
+<li>
+<p>szperacze internetowe (wyszukiwarki, okazjonalne, skrypty&#8230;&#8203; - roboty)</p>
+</li>
+<li>
+<p>plik txt</p>
+</li>
+<li>
+<p>uprzejmościowe</p>
+</li>
+<li>
+<p>4 sekcje</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sekcje_robots_txt">Sekcje <code>robots.txt</code></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>katalogi</p>
+</li>
+<li>
+<p>pliki</p>
+</li>
+<li>
+<p>ścieżki czyste</p>
+</li>
+<li>
+<p>ścieżki z parametrem</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ćwiczenie_2">Ćwiczenie</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>znajdź i porównaj plik <code>robots.txt</code> dla trzech stron, jakie często odwiedzasz. Co on Ci mówi? Jeśli nie masz pomysłu na strony, poniżej jest kilka przykładów</p>
+</li>
+<li>
+<p>przestudiuj sekcje w <a href="https://www.dionach.com/robots.txt" class="bare">https://www.dionach.com/robots.txt</a> i nazwij je</p>
+</li>
+<li>
+<p>używając poleceń <code>curl</code> i <code>grep</code> (<code>man curl</code> i <code>man grep</code> by wiedzieć jak ich użyć) spróbuj pobrać plik <code>robots.txt</code> ze stron poniżej i sprawdź, na której z nich może być język PHP a na której jest Wordpress</p>
+</li>
+<li>
+<p>używając tych samych poleceń co powyżej, sprawdź ile rozmaitych botów odwiedza GitHub na tyle często, że są dla nich instrukcje w pliku <code>robots.txt</code>?</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="_strony">Strony</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Dionach (link above)</p>
+</li>
+<li>
+<p>Apache Software Foundation (apache.org)</p>
+</li>
+<li>
+<p>Wikipedia.com</p>
+</li>
+<li>
+<p>GitHub.com</p>
+</li>
+<li>
+<p>Wordpress.com</p>
+</li>
+<li>
+<p>Php.net</p>
+</li>
+<li>
+<p>mój blog (lafkblogs&#8230;&#8203;)</p>
+</li>
+<li>
+<p>krebsonsecurity</p>
+</li>
+<li>
+<p>Strona Daniela Miesslera (danielmiessler.com)</p>
+</li>
+<li>
+<p>Niebezpiecznik</p>
+</li>
+<li>
+<p>Sekurak</p>
+</li>
+<li>
+<p>Zaufana Trzecia Strona</p>
+</li>
+<li>
+<p><a href="http://www.robotstxt.org/" class="bare">http://www.robotstxt.org/</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_źródła_by_się_nauczyć">Źródła by się nauczyć</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="http://www.robotstxt.org/orig.html" class="bare">http://www.robotstxt.org/orig.html</a></p>
+</li>
+<li>
+<p>Wikipedia: <a href="https://pl.wikipedia.org/wiki/Robots.txt" class="bare">https://pl.wikipedia.org/wiki/Robots.txt</a></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_praktyczne_podejście">Praktyczne podejście</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://www.webgnomes.org/blog/robots-txt-file-guide-that-wont-put-you-to-sleep/" class="bare">https://www.webgnomes.org/blog/robots-txt-file-guide-that-wont-put-you-to-sleep/</a></p>
+</li>
+<li>
+<p><a href="https://searchengineland.com/have-you-considered-privacy-issues-when-using-robots-txt-the-robots-meta-tag-149732" class="bare">https://searchengineland.com/have-you-considered-privacy-issues-when-using-robots-txt-the-robots-meta-tag-149732</a></p>
+</li>
+<li>
+<p><a href="http://www.chami.com/tips/internet/040498I.html" class="bare">http://www.chami.com/tips/internet/040498I.html</a></p>
+</li>
+<li>
+<p><a href="https://www.synopsys.com/blogs/software-security/robots-txt/" class="bare">https://www.synopsys.com/blogs/software-security/robots-txt/</a></p>
+</li>
+<li>
+<p><a href="https://www.dionach.com/blog/the-security-value-of-the-robotstxt-file" class="bare">https://www.dionach.com/blog/the-security-value-of-the-robotstxt-file</a></p>
+</li>
+<li>
+<p><a href="https://security.stackexchange.com/questions/11208/robots-txt-security-strategy" class="bare">https://security.stackexchange.com/questions/11208/robots-txt-security-strategy</a></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_może_ja_nie_ogarniam_ale_są_fachowcy">Może ja nie ogarniam, ale są fachowcy!</h3>
+<div class="paragraph">
+<p>Weźmy coś, co jest wszędzie. Coś&#8230;&#8203; Dla bezpieczeństwa!</p>
+</div>
+<div class="paragraph">
+<p>Np. OpenSSL&#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_openssl">OpenSSL?</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">OpenSSL </dt>
+<dd>
+<p>wieloplatformowa, otwarta implementacja protokołów SSL i TLS oraz algorytmów kryptograficznych ogólnego przeznaczenia. Udostępniana jest na licencji zbliżonej do licencji Apache. Dostępna jest dla systemów uniksopodobnych, OpenVMS i Microsoft Windows. za: Wikipedia</p>
+</dd>
+</dl>
+</div>
+<div class="quoteblock">
+<blockquote>
+szacunkowo dwie trzecie serwerów Web używa OpenSSL by przedstawić się użytkownikom końcowym i zapobiec podsłuchiwaniu haseł, danych bankowych itp. czułych informacji (tłumaczenie własne, artykuł Dana Goodina z roku 2014)
+</blockquote>
+<div class="attribution">
+&#8212; ArsTechnica<br>
+<cite>https://arstechnica.com/information-technology/2014/04/critical-crypto-bug-in-openssl-opens-two-thirds-of-the-web-to-eavesdropping/</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>Wg Netcrafta (<a href="https://news.netcraft.com/archives/2014/04/02/april-2014-web-server-survey.html" class="bare">https://news.netcraft.com/archives/2014/04/02/april-2014-web-server-survey.html</a>):</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Apacz w 2014tym miał 38% rynku</p>
+</li>
+<li>
+<p>IIS 31%</p>
+</li>
+<li>
+<p>NginX 15%</p>
+</li>
+<li>
+<p>Google 2%</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Apacz i Nginx używają OpenSSLa (mają wbudowaną bibliotekę). Jeśli spojrzeć na dane dla aktywnych stron (aktywna tutaj jest rozumiana jako nieszablonowa), to <strong>Apacz (52%) i NginX (14%) - z wbudowanym OpenSSLem - faktycznie odpowiadają 2/3 rynku.</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_heartbleed">Heartbleed</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./img/heartbleed.png" alt="heartbleed">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/xkcd_heartbleed_explanation.png" alt="xkcd heartbleed explanation">
+</div>
+<div class="title">Figure 1. <a href="http://xkcd.com/1354/" class="bare">http://xkcd.com/1354/</a></div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="http://heartbleed.com/" class="bare">http://heartbleed.com/</a></p>
+</li>
+<li>
+<p><a href="https://heartbleedheader.com/" class="bare">https://heartbleedheader.com/</a></p>
+</li>
+<li>
+<p><a href="https://www.openssl.org/news/secadv/20140407.txt" class="bare">https://www.openssl.org/news/secadv/20140407.txt</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Wprowadzone w Sylwestra. Niezauważone przez kawał czasu!</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ćwiczenie_3">Ćwiczenie</h3>
+<div class="paragraph">
+<p>Znajdź za pomocą Shodana serwery, które są wciąż podatne na Heartbleed</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_libressl">LibreSSL</h3>
+<div class="paragraph">
+<p>Heartbleed &#8594; LibreSSL &#8594; 90k linii kodu C wycięte w pierwszym tygodniu pracy</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+Some of that is indentation, because we are trying to make the code more comprehensible. 99.99% of the community does not care for VMS support, and 98% do not care for Windows support. They care for POSIX support, so that the Unix and Unix derivatives can run. They don&#8217;t care for FIPS. Code must be simple. Even after all those changes, the codebase is still API compatible. Our entire ports tree (8700 applications) continue to compile and work, after all these changes.
+</blockquote>
+<div class="attribution">
+&#8212; Theo de Raadt (twórca OpenBSD i OpenSSH)<br>
+<cite>wywiad dla ZDNet</cite>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_no_dobra_ale_wypadki_chodzą_po_ludziach">No dobra, ale wypadki chodzą po ludziach</h3>
+<div class="paragraph">
+<p>Poprawka wymaga zmian w serwerach, systemach operacyjnych, komponentach, bibliotekach&#8230;&#8203;<br>
+<em>Fundamentalna wpadka</em>, ale może jednorazowa?<br>
+Poza tym projekt robiony przez kilkanaście/-dziesiąt osób po godzinach&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Weźmy coś robionego w staranny, zautomatyzowany sposób. Wyrafinowany, naukowy niemalże.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ataki_na_procesory_i_pamięć_p">Ataki na Procesory i Pamięć! :P</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nie można celniej uderzyć niż w serce wszystkiego, prawda?</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>RowHammer jest poważnym problemem</p>
+</li>
+<li>
+<p>Spectre i Meltdown to "kolejna generacja"</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>side-channel się rozkręca</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>chłopaki od procków od lat robili "by szybciej było"</p>
+</li>
+<li>
+<p>nasze "obrony" programistyczne przed tymi atakami są niewiele (nic?) niewarte</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>vide AnC</p>
+</li>
+<li>
+<p>nie bez kozery wszyscy mówią "zmień sprzęt", tylko na jaki?</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Fatalizm? Teraz można go określić realizmem. Rozwiązaniem: paranoja. Odpalanie jednej apki na jednej maszynie wirtualnej na jednej maszynie fizycznej.</strong></p>
+</div>
+<div class="sect2">
+<h3 id="_rowhammer">RowHammer</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>wal młotkiem w dwa rzędy w pamięci: przerzucaj 0 &#8594; 1 i vice versa</p>
+</li>
+<li>
+<p>pamięci - by być szybszymi - są super-skondensowane</p>
+</li>
+<li>
+<p>w końcu elektryka sprawi, że rząd "ofiara", ten między nimi, też się zmieni</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><a href="https://www.blackhat.com/docs/us-15/materials/us-15-Seaborn-Exploiting-The-DRAM-Rowhammer-Bug-To-Gain-Kernel-Privileges.pdf" class="bare">https://www.blackhat.com/docs/us-15/materials/us-15-Seaborn-Exploiting-The-DRAM-Rowhammer-Bug-To-Gain-Kernel-Privileges.pdf</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_upiór_i_stapianie_spectre_i_meltdown">Upiór i Stapianie - Spectre i Meltdown</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./img/Ataki_Meltdown_Spectre_Kernel_vulnerability.png" alt="Ataki Meltdown Spectre Kernel vulnerability">
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Spectre </dt>
+<dd>
+<p>upiór, bo będzie nas długo nawiedzać (ciężkie do naprawy). Nawiedza inne aplikacje, przez SPEKulatywne wykonywanie kodu. Uniwersytet w Gratz ma stronę <a href="https://spectreattack.com" class="bare">https://spectreattack.com</a> zawierającą krótki opis, podstawowe informacje, serię pytań i odpowiedzi i PDFa z dokładnym opisem</p>
+</dd>
+<dt class="hdlist1">Meltdown </dt>
+<dd>
+<p>stapia bariery między kernelem i aplikacjami, które są wymuszane głównie sprzętowo! Uniwersytet w Gratz ma stronę <a href="https://meltdownattack.com" class="bare">https://meltdownattack.com</a> zawierającą krótki opis, podstawowe informacje, serię pytań i odpowiedzi i PDFa z dokładnym opisem</p>
+</dd>
+</dl>
+</div>
+<div class="quoteblock">
+<blockquote>
+The vulnerabilities are astounding; I would argue they are one of the most important discoveries in computer science in the last 10–20 years.
+</blockquote>
+<div class="attribution">
+&#8212; Matt Klein<br>
+<cite>Meltdown and Spectre explained</cite>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/Ataki_Meltdown_diagram.jpg" alt="Ataki Meltdown diagram">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/Ataki_Spectre_Meltdown.png" alt="Ataki Spectre Meltdown">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Więcej? Źródła:</div>
+<div class="paragraph">
+<p>W kolejności głębokości opisu:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://danielmiessler.com/blog/simple-explanation-difference-meltdown-spectre/" class="bare">https://danielmiessler.com/blog/simple-explanation-difference-meltdown-spectre/</a></p>
+</li>
+<li>
+<p><a href="https://spectreattack.com" class="bare">https://spectreattack.com</a> lub <a href="https://meltdownattack.com" class="bare">https://meltdownattack.com</a>, jedna jest lustrem drugiej</p>
+</li>
+<li>
+<p><a href="https://medium.com/@mattklein123/meltdown-spectre-explained-6bc8634cc0c2" class="bare">https://medium.com/@mattklein123/meltdown-spectre-explained-6bc8634cc0c2</a></p>
+</li>
+<li>
+<p><a href="https://www.blog.google/products/google-cloud/answering-your-questions-about-meltdown-and-spectre/" class="bare">https://www.blog.google/products/google-cloud/answering-your-questions-about-meltdown-and-spectre/</a></p>
+</li>
+<li>
+<p><a href="https://databricks.com/blog/2018/01/13/meltdown-and-spectre-performance-impact-on-big-data-workloads-in-the-cloud.html" class="bare">https://databricks.com/blog/2018/01/13/meltdown-and-spectre-performance-impact-on-big-data-workloads-in-the-cloud.html</a></p>
+</li>
+<li>
+<p><a href="https://databricks.com/blog/2018/01/16/meltdown-and-spectre-exploits-and-mitigation-strategies.html" class="bare">https://databricks.com/blog/2018/01/16/meltdown-and-spectre-exploits-and-mitigation-strategies.html</a></p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Obrona</div>
+<div class="paragraph">
+<p>Zmień sprzęt na ten, co jeszcze nie wyszedł&#8230;&#8203; :/</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://xkcd.com/1938/" alt="1938">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_anc">AnC</h3>
+<div class="paragraph">
+<p>Gość mówi, że zrobił atak, który obchodzi RetPoline, czyli anty-upiorne środki od Google. Nie zweryfikowałem, to nie linkuję.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Obrona?</div>
+<div class="paragraph">
+<p>Jeśli prawdziwe, to likwiduje najlepszą obronę na Spectre jaką mamy programistycznie. Nie znam zatem innej niż łaty na prockach. :P</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_no_i_oczywiście_nasi_ukochani">No i oczywiście nasi ukochani&#8230;&#8203;</h3>
+<div class="paragraph">
+<p>najmilsi, najlepsi, użyszkodnicy</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/UsersBadSecurity.png" alt="UsersBadSecurity">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_a_my_sami">A my sami?</h3>
+<div class="paragraph">
+<p>jeszcze lepsi!</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Skarby z GitHuba: <a href="https://github.com/search?q=define%28%27SECURE_AUTH_KEY%27%29&amp;type=Code" class="bare">https://github.com/search?q=define%28%27SECURE_AUTH_KEY%27%29&amp;type=Code</a></p>
+</li>
+<li>
+<p>Trellololololololo&#8230;&#8203;</p>
+</li>
+<li>
+<p>Digidata - certyfikaty podpisywali - utrata prywatnego klucza :P</p>
+</li>
+<li>
+<p><a href="https://www.defcon.org/images/defcon-17/dc-17-presentations/defcon-17-zusman-hacking_pki.pdf" class="bare">https://www.defcon.org/images/defcon-17/dc-17-presentations/defcon-17-zusman-hacking_pki.pdf</a></p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="_trellolololo">Trellolololo&#8230;&#8203;</h4>
+<div class="quoteblock">
+<div class="title">Jak zarządzać hasłami?</div>
+<blockquote>
+People also use Public Trello boards as a fancy public password manager for their organization’s credentials.<br>
+Some examples included the server, CMS, CRM, business emails, social media accounts, website analytics, Stripe, AdWords accounts, and much more.
+</blockquote>
+<div class="attribution">
+&#8212; Kushagra Pathak<br>
+<cite>security researcher on Trello</cite>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/Kushagra_Pathak_FTP_SSH.png" alt="Kushagra Pathak FTP SSH">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/Kushagra_Pathak_Gmail.png" alt="Kushagra Pathak Gmail">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rząd_to_rozwiąże">Rząd to rozwiąże?</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>EU "ok, bez furtek, ale kraje wymieniają się ekspertyzą, ja Twój PCKS, Ty mój"</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><a href="https://www.theregister.co.uk/2017/10/19/eu_crypto_cracking/" class="bare">https://www.theregister.co.uk/2017/10/19/eu_crypto_cracking/</a></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>US "ok, bez furtek, ale otwartym tekstem"</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><a href="https://www.theregister.co.uk/2017/10/30/encryption_backdoors_plaintext_deputy_ag/" class="bare">https://www.theregister.co.uk/2017/10/30/encryption_backdoors_plaintext_deputy_ag/</a></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Windows pozwala na instalację certyfikatów bez Twojej wiedzy i potwierdzenia</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Uzbekistan już ma rządowy i chce, by wszyscy obywatele zainstalowali</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Rosja czy Chiny już mają armie hakerów, które wykorzystują:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>prezydentura Trumpa</p>
+</li>
+<li>
+<p>zamieszki we Francji</p>
+</li>
+<li>
+<p>elekcyjne referendum w Hong Kongu</p>
+</li>
+<li>
+<p>laptopy Ebaya</p>
+</li>
+<li>
+<p>czemu G. wyszło z Chin?</p>
+</li>
+<li>
+<p>czajniki</p>
+</li>
+<li>
+<p>być może "nagła" awaria czterech dużych polskich banków (naraz, jednego dnia)</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p><a href="https://www.bankier.pl/wiadomosc/Awaria-w-kilku-polskich-bankach-m-in-w-Banku-Pekao-ING-Banku-Slaskim-i-Alior-Banku-7631270.html" class="bare">https://www.bankier.pl/wiadomosc/Awaria-w-kilku-polskich-bankach-m-in-w-Banku-Pekao-ING-Banku-Slaskim-i-Alior-Banku-7631270.html</a></p>
+</li>
+<li>
+<p>przecięty światłowód: <a href="https://prnews.pl/awarii-pko-bp-zwolnil-uzytkownikow-bankowosci-elektronicznej-oplat-przelewy-natychmiastowe-438320" class="bare">https://prnews.pl/awarii-pko-bp-zwolnil-uzytkownikow-bankowosci-elektronicznej-oplat-przelewy-natychmiastowe-438320</a></p>
+</li>
+<li>
+<p>10ty, dużo przelewów? ZUSy, czynsze&#8230;&#8203;</p>
+</li>
+<li>
+<p>albo test cyberwywiadu sąsiadów</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>pracownicy Google</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>wymusili na firmie porzucenie projektu Maven</p>
+</li>
+<li>
+<p>chcą wymusić porzucenie Dragonfly</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>#badBios</p>
+</li>
+<li>
+<p>Target</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_liczy_się_wszystko">Liczy się wszystko</h3>
+<div class="paragraph">
+<p>Czyli najsłabsze ogniwo determinuje siłę wszystkich Twoich zabezpieczeń.</p>
+</div>
+<div class="paragraph">
+<p>Znam OWASP! - to super. To pozwól, że powiem: Top 10 OWASPa to podstawy. Nic wyrafinowanego.</p>
+</div>
+<div class="paragraph">
+<p>Zabezpieczyłem aplikację! Rewela! Niestety, atak może przyjść przez dodatek do przeglądarki (użytkownika!), słabe hasło, wpięcie spreparowanego USB gdzieś do firmy, podstawiony czajnik, pamięć, procesor albo słabiznę w bibliotece systemu operacyjnego.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_liczy_się_wszystko_2">Liczy się wszystko!</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>przeglądarka użytkownika</p>
+</li>
+<li>
+<p>dodatki do niej</p>
+</li>
+<li>
+<p>współpracownicy (sieciowcy, sysadmini&#8230;&#8203;)</p>
+</li>
+<li>
+<p>komponenty na których polegamy (biblioteki, zależności)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Apacz</p>
+</li>
+<li>
+<p>TinyMCE</p>
+</li>
+<li>
+<p>OpenSSL</p>
+</li>
+<li>
+<p>itp.,</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>sprzęt: procesory, pamięć, BIOS</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_łańcuch_zabezpieczeń">Łańcuch zabezpieczeń</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>sprzęt: procesor, pamięć, BIOS, firmware</p>
+</li>
+<li>
+<p>SO: aktualizacje systemu, bibliotek, stosu sieciowego</p>
+</li>
+<li>
+<p>sieci wszelakie: radiowe (#badbios), Bluetooth, (bez)przewodowe</p>
+</li>
+<li>
+<p>biblioteki systemu operacyjnego czy serwerów: jak OpenSSL</p>
+</li>
+<li>
+<p>komponenty kluczowego oprogramowania: Drupal, PHP, JavaScript, TinyMCE</p>
+</li>
+<li>
+<p>portale, CMSy, wersje języka, użyte API</p>
+</li>
+<li>
+<p>kod aplikacji (co umożliwia? z jakimi restrykcjami?)</p>
+</li>
+<li>
+<p>proces tworzenia aplikacji - kto i kiedy ma dostęp do źródeł?</p>
+</li>
+<li>
+<p>ludzie: pracownicy, agenci polowi, lokalni admini, pracownicy partnerów, ludzie od zapór czy centrów danych / serwerów, pracownicy chmury z której korzystacie</p>
+</li>
+<li>
+<p>ludzie: użytkownicy Waszych systemów, komponentów, programów, klienci (ludzccy i programistyczni)</p>
+</li>
+<li>
+<p>kable jakich używacie, cały sprzęt sieciowy: przewodowy lub bez, AP, rutery, switche, repeatery, huby,</p>
+</li>
+<li>
+<p>fizyczne dostępy i sieciowe dostępy</p>
+</li>
+<li>
+<p>zasilanie i jego redundancja, UPSy</p>
+</li>
+<li>
+<p>lekka i ciężka wirtualizacja</p>
+</li>
+<li>
+<p>prawa dostępu: co może aplikacja? użytkownik bazodanowy do niej przypisany? konto w systemie na którym apka działa? gdzie sięgają ich uprawnienia?</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Docker == prawa roota! Znam ludzi, którzy mówią, że uciekną z każdego kontenera na system pod spodem.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_problemów_jest_wiele">Problemów jest wiele</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>liczy się wszystko - od A do Z</p>
+</li>
+<li>
+<p>zaufanie to łańcuch</p>
+</li>
+<li>
+<p>najsłabsze ogniwo</p>
+</li>
+<li>
+<p>bezpieczeństwo jako dobudówka do apki</p>
+</li>
+<li>
+<p>oglądanie się na innych</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_podsumowując_wnioski_z_cyberteatru">Podsumowując - wnioski z cyberteatru</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>problemów jest wiele, łańcuch zabezpieczeń o których trzeba myśleć - długaśny, sposobów atakowania: BARDZO dużo</p>
+</li>
+<li>
+<p>wszyscy robimy teatr (użytkownicy, programiści, bezpieczniki - słowem <em>ludzie</em>)</p>
+</li>
+<li>
+<p><strong>Teatr jest łatwiejszy</strong></p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+wygoda tłamsi bezpieczeństwo - nasza, użytkowników, innych. Chyba, że zbudujesz odpowiednią kulturę, faktycznie ceniącą bezpieczeństwo i czerpiącą dumę z takich zabezpieczeń. Wiedza, całokształt, wbudowanie (więcej sekcję niżej).
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+przypomnij sobie cały łańcuch zabezpieczeń. Ile tego było! Niemożliwym zdaje się zabezpieczenie wszystkiego, prawda? Ale: nie chodzi o to by biegać najszybciej. Chodzi, by biegać szybciej od pozostałych.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+musicie wiedzieć przed kim się bronicie. Atak Seby z osiedla, który porywa Wam laptopa? Czy atak obcego cyberwywiadu? A może podsłuch obcych rządów, skoro działamy na oprogramowaniu i sprzęcie made in China/USA? Czy po prostu tzw. script kiddies lub groźniejszy hakerski kolektyw a la Anonymous?
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ale_ja_chcę_bezpieczeństwa">Ale ja chcę bezpieczeństwa!</h3>
+<div class="paragraph">
+<p><strong>Wiedza, całokształt, wbudowanie!</strong></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Wiedza </dt>
+<dd>
+<p>wiedz, że coś się dzieje! ;-) Wiedz gdzie działać i co robić.</p>
+</dd>
+<dt class="hdlist1">Podejście holistyczne </dt>
+<dd>
+<p>nie tylko apka i zależności, całość. Wiedza (świadomość) i akcje muszą być holistyczne.</p>
+</dd>
+<dt class="hdlist1">Wbudowanie </dt>
+<dd>
+<p>w proces, w aplikację, w ludzi</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>patrz na całość, rozszerz strefę wpływu</p>
+</li>
+<li>
+<p>bezpieczeństwo <em>wbudowane</em>, nie <em>dobudowane</em></p>
+</li>
+<li>
+<p>weryfikuj, że można ufać każdemu ogniwu łańcucha</p>
+</li>
+<li>
+<p>znaj swoje komponenty i ich słabości</p>
+</li>
+<li>
+<p>aktualizuj, aktualizuj, aktualizuj</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>auto &gt;&gt; ręczne</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>chcesz by ludzie sami dbali o bezpieczeństwo, by sami zwracali sobie wzajemnie uwagę</p>
+</li>
+</ol>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Więcej w zabezpieczeniach i podsumowaniu!</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pytania_2">Pytania?</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./img/question-mark.jpg" alt="question mark">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_numerki">Numerki</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Rzeczy się zmieniają, ale spróbujmy zrozumieć skalę.</p>
+</div>
+<div class="sect2">
+<h3 id="_weźmy_taki_owasp">Weźmy taki OWASP</h3>
+<div class="paragraph">
+<p>W OWASP 2017 dwa punkty wyleciały jako już względnie mało istotne:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A8-Cross-Site Request Forgery (CSRF), as many frameworks include CSRF defenses, it was found in only 5% of applications.</p>
+</li>
+<li>
+<p>A10-Unvalidated Redirects and Forwards, while found in approximately 8% of applications, it was edged out overall by XXE.</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+Over the last few years, the fundamental technology and architecture of applications has changed significantly:<br>
+• Microservices written in node.js and Spring Boot are replacing traditional monolithic applications. Microservices come with their<br>
+own security challenges including establishing trust between microservices, containers, secret management, etc. Old code never<br>
+expected to be accessible from the Internet is now sitting behind an API or RESTful web service to be consumed by Single Page<br>
+Applications (SPAs) and mobile applications. Architectural assumptions by the code, such as trusted callers, are no longer valid.<br>
+• Single page applications, written in JavaScript frameworks such as Angular and React, allow the creation of highly modular<br>
+feature-rich front ends. Client-side functionality that has traditionally been delivered server-side brings its own security challenges.<br>
+• JavaScript is now the primary language of the web with node.js running server side and modern web frameworks such as<br>
+Bootstrap, Electron, Angular, and React running on the client.
+</blockquote>
+<div class="attribution">
+&#8212; OWASP TOP 10 2017<br>
+<cite>Podsumowanie zmian</cite>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_white_hat_application">White Hat Application</h3>
+<div class="paragraph">
+<p>Ich raport Security Statistics jest publikowany od 12 lat. Dość wiarygodny zatem. :-)</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://info.whitehatsec.com/rs/675-YBI-674/images/WHS%202017%20Application%20Security%20Report%20FINAL.pdf" class="bare">https://info.whitehatsec.com/rs/675-YBI-674/images/WHS%202017%20Application%20Security%20Report%20FINAL.pdf</a> - startowe statystyki</p>
+</li>
+<li>
+<p><a href="https://info.whitehatsec.com/rs/675-YBI-674/images/WH-2016-Stats-Report-FINAL.pdf" class="bare">https://info.whitehatsec.com/rs/675-YBI-674/images/WH-2016-Stats-Report-FINAL.pdf</a> - strona 26</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_positive_technologies">Positive Technologies</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://www.ptsecurity.com/upload/corporate/ww-en/analytics/WebApp-Vulnerabilities-2017-Q4-eng.pdf" class="bare">https://www.ptsecurity.com/upload/corporate/ww-en/analytics/WebApp-Vulnerabilities-2017-Q4-eng.pdf</a></p>
+</li>
+<li>
+<p><a href="https://www.ptsecurity.com/upload/corporate/ww-en/analytics/WebApp-Attacks-2017-eng.pdf" class="bare">https://www.ptsecurity.com/upload/corporate/ww-en/analytics/WebApp-Attacks-2017-eng.pdf</a></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_duże_i_małe_włamy">Duże i małe włamy</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./img/2014TopBreaches.jpg" alt="2014TopBreaches">
+</div>
+<div class="title">Figure 2. Włamy w 2014tym</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/TypesOfDataLeaks.png" alt="TypesOfDataLeaks">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/Breach-Level-Index-Infographic-2016-Gemalto-1500.jpg" alt="Breach Level Index Infographic 2016 Gemalto 1500">
+</div>
+<div class="title">Figure 3. Włamy w 2016tym</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_internet_śmieci_2">Internet Śmieci</h3>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<div class="title">Statystyki</div>
+<p>Za: <a href="https://www.visioncritical.com/internet-of-things-stats/" class="bare">https://www.visioncritical.com/internet-of-things-stats/</a></p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+2015: 15,4 mld. 2025: 75,4mld.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Za: statista, <a href="https://www.statista.com/statistics/471264/iot-number-of-connected-devices-worldwide/" class="bare">https://www.statista.com/statistics/471264/iot-number-of-connected-devices-worldwide/</a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/Staty_IoT_mld_2015-2025.png" alt="Staty IoT mld 2015 2025">
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_komponenty_programu">Komponenty programu?</h3>
+<div class="paragraph">
+<p><a href="https://www.slideshare.net/xsist10/security-theatre-scotland-php" class="bare">https://www.slideshare.net/xsist10/security-theatre-scotland-php</a> - slajd 23 - 57</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ile miesięcy ma program?</p>
+</li>
+<li>
+<p>25% programów ma dziurę w 3 miesiące</p>
+</li>
+<li>
+<p><strong>Mediana</strong>: 20 miesięcy od wypuszczenia do znalezienia problemu</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Średni wiek stron: 26 miesięcy :(
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_najgroźniejsze_wg_mnie">Najgroźniejsze wg mnie</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>socjotechnika</p>
+</li>
+<li>
+<p>łowienie frajera / naciąganie (ang. phishing)</p>
+</li>
+<li>
+<p>siłowe (ang. brute force)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Proste, szybkie, potencjalnie śmiertelne.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pytania_3">Pytania?</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./img/question-mark.jpg" alt="question mark">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_żargon">Żargon</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>byśmy mówili o tym samym</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+Security Theatre - the practice of investing time and effort into creating an illusion of security, rather than actually doing anything about it
+</blockquote>
+<div class="attribution">
+&#8212; Security Theatre<br>
+<cite>Thomas Shone</cite>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CVE </dt>
+<dd>
+<p>Common Vulnerability and Exposure</p>
+</dd>
+<dt class="hdlist1">OWASP </dt>
+<dd>
+<p>Open Web App Security Project, ci goście od listy 10 powodów dlaczego wszystko jest do bani. ;-)</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+żarty żartami, ale Mitre CVE i OWASP mają dobre zasoby, polecam lekturę!
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<a href="https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf">2017 TOP 10</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Crypting </dt>
+<dd>
+<p>proces przepuszczania złośliwej binarki przez obfuskację aż antywirus nie pozna co to.</p>
+</dd>
+<dt class="hdlist1">Kod źródłowy, source code </dt>
+<dd>
+<p>pliki <code>.php</code> i innych języków.</p>
+</dd>
+<dt class="hdlist1">Kod binarny, binaria, binary code </dt>
+<dd>
+<p>kompilowany czy interpretowany, jeśli macie.</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Autorzy systemu zostawiają sobie furtki, jak Aho w logowaniu Unixa&#8230;&#8203;
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Furtka, tylne drzwi, backdoor </dt>
+<dd>
+<p>specjalne wejście "na skróty", zwykle dość przydatne podczas tworzenia programu, często zapomniane i zostawione, czasem zostawione jako mechanizm do replikacji błędów, lub jako część uprawnień admina</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/xkcd_support.png" alt="xkcd support">
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">PHP5 </dt>
+<dd>
+<p>wersja z czerwca 2013</p>
+</dd>
+<dt class="hdlist1">PHP7 </dt>
+<dd>
+<p>wersja z grudnia 2015</p>
+</dd>
+<dt class="hdlist1">Konfiguracja </dt>
+<dd>
+<p>pomocnicze dane sterujące aplikacją (włącza lub wyłącza funkcje, zmienia zachowanie). Zwykle zapisane w plikach pomocniczych i/lub w bazie danych. Może być też konfiguracją systemową (np. przez zmienne środowiskowe, systemowe lub konfigurację systemu). Konfiguracja komponentów systemu (jak np. baza danych czy serwer WWW) również tu się zalicza.</p>
+</dd>
+<dt class="hdlist1">Atakujący, napastnik </dt>
+<dd>
+<p>osoba lub grupa, która - niezależnie od powodu - stara się podnieść swoje uprawnienia, zdobyć dostęp do systemów ofiary, jej dane, lub wykorzystać jej infastrukturę do własnych celów (botnety, kopanie bitcoinów, defamacja serwera, zemsta) albo po prostu zakłócić działanie systemów ofiary.</p>
+</dd>
+<dt class="hdlist1">Obrońca </dt>
+<dd>
+<p>każdy pracownik obranej na cel (niekoniecznie jeszcze zaatakowanej) strony / systemu / firmy.</p>
+</dd>
+<dt class="hdlist1">CVE </dt>
+<dd>
+<p>Common Vulnerability and Exposures (Enumeration) - baza wszystkich zidentyfikowanych dziur, opisanych, bez punktacji. Prowadzona przez Mitre.</p>
+</dd>
+<dt class="hdlist1">Mitre </dt>
+<dd>
+<p>organizacja <a href="https://www.mitre.org/">non-profit</a> prowadząca bazę CVE.</p>
+</dd>
+<dt class="hdlist1">Exploitable Vulnerability, luka, dziura </dt>
+<dd>
+<p>dziura do bezpośredniego wykorzystania (buffer overflow, przewidywalny algorytm generujący hasła lub entropię do ich skracania, np. bazujący na dacie przyłączenia się)</p>
+</dd>
+<dt class="hdlist1">Security Weakness, słabość </dt>
+<dd>
+<p>choć nie tak drastyczna jak dziura i sama w sobie nie jest luką w zabezpieczeniach, to drastycznie zwiększa szkody powstałe w wyniku ew. luki (php <code>register_globals</code>, łamanie zasadu minimalnych uprawnień, nie solenie skrótów haseł).</p>
+</dd>
+<dt class="hdlist1">Socjotechnika, social engineering </dt>
+<dd>
+<p>sposób zmanipulowania i/lub perswazji. Socjotechniki nie muszą obierać za cel obrońców (łzawa - zmyślona bądź nie - historia na 4chan i jesteś celem ataku, bo skrzywdziłeś kogoś). Socjotechniki mogą też być rezultatem źle rozegranej rozmowy na mediach społecznych (Kathe, w imieniu TMobile Austria)<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/Hasła_MobileAustriaNieWidziProblemu.jpg" alt="Hasła MobileAustriaNieWidziProblemu">
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Exploit, hak </dt>
+<dd>
+<p>program lub kod (wg niektórych też sposób, czyli przepis na napisanie takiego kodu) umożliwiający otrzymanie uprawnień, kodu lub danych nie przeznaczonych dla nas.</p>
+</dd>
+<dt class="hdlist1">Etyczne hakowanie, ethical hacking </dt>
+<dd>
+<p>gdy użyte w dobrych celach.</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+reguły nie są klarowne, vide banki Iranu (podejrzenie o oszustwo klientów) czy strona dla ofiar Tsunami (biorą pieniądze dla ofiar i siedzą cicho).
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Biały kapelusz, white hat </dt>
+<dd>
+<p>często były <strong>czarny kapelusz</strong>, który zmienił strony. Wzięte z westernu. Pomagają z testami zabezpieczeń, kontrowaniem haków itp. Często zamienne z <strong>pentesterem</strong>.</p>
+</dd>
+<dt class="hdlist1">Czarny kapelusz, black hat </dt>
+<dd>
+<p>haker pracujący nielegalnie, obejmuje też <strong>białe kapelusze</strong> jeśli łamią prawo, albo ochotniczą samopomoc</p>
+</dd>
+<dt class="hdlist1">Pen-tester, penetration tester, tester zabezpieczeń, tester penetracyjny </dt>
+<dd>
+<p>człowiek szukający jak spenetrować zabezpieczenia danego systemu.</p>
+</dd>
+<dt class="hdlist1">Zero-day exploit, exploit dnia zero </dt>
+<dd>
+<p>gdy wychodzi nowa wersja programu i zanim wyjdzie, lub zaraz po jej opublikowaniu jest już hak na nią. Zwykle znajdowany przez czarne kapelusze, albo kogoś kto chce dorobić i sprzedaje znalezisko na czarnym rynku, albo upublicznia mając gdzieś reguły ujawniania (<strong>reasonable disclosure</strong>).</p>
+</dd>
+<dt class="hdlist1">Reasonable disclosure, reguły ujawniania </dt>
+<dd>
+<p>dosłownie zdroworozsądkowe lub rozsądne ujawnienie. Gdy biały kapelusz znajdzie haka i poinformuje Cię o tym, byś mógł go naprawić <strong>zanim</strong> to ogłosi. Znane grupy mają swoje polityki do tego.</p>
+</dd>
+<dt class="hdlist1">Funkcja skrótu, hash function, hash </dt>
+<dd>
+<p>funkcja zwraca (zwykle) unikatowy skrót danych wejściowych. Skróty są tej samej długości (dla konkretnego algorytmu skracania), niezależnie od wielkości danych wejściowych. <strong>Używana do walidacji danych, komunikatów, pobrancych plików</strong> i przechowywania haseł.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/git_SHA1.png" alt="git SHA1">
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">RNG, Random Number Generator, generator liczb losowych </dt>
+<dd>
+<p>czasem pseudo-losowych, warto wiedzieć jak bardzo pseudo i czy w ogóle. Zależny od źródeł entropii (zwykle branych z systemu, np. <code>/dev/rand</code> czy <code>/dev/urandom</code>, czyli zależnych od działań podejmowanych w systemie przez aktualnych użytkowników). <strong>Kamień węgielny kryptografii</strong>.</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Pseudo-losowość oznacza możliwość przewidzenia ciągu wylosowanych liczb!
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/xkcd_random.png" alt="xkcd random">
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CA, Certificate Authority </dt>
+<dd>
+<p>byt duży, z wyrobioną marką, zaufany na tyle, by ufać podpisanym przezeń certyfikatom (za które zwykle się trochę płaci!). Podpisy mogą być nawet ważne na cały świat.<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup> Są przypadki, kiedy to zaufanie okazało się źle ulokowane (Digidata). Przykłady CA (ogólnie znanych): Thawte, Verizon, Komodo. System jest przedmiotem kontrowersji i debat, np. z racji na <strong>samopodpisane certyfikaty</strong>.</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+CA jest (przynajmniej przez niektórych)<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup> uważany za system fundamentalnie złamany i nie do uratowania, nie tylko z racji na istnienie samopodpisanych certyfikatów, które wielu określa jako słabość, ale nie główny powód braku zaufania. Więcej szczegółów jest dostępnych w sekcji "słabości implementacji" (i wśród ponad 40 referencji) na Wikipedii.<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Self-signed certificate, samopodpisany certyfikat </dt>
+<dd>
+<p>CA mogą podpisać certyfikaty, certyfikaty podpisane przez CA mogą podpisać inne certyfikaty itp. Łańcuch ten ma alternatywę. Można podpisać swój certyfikat SAMEMU. Taki samopodpisany certyfikat też może podpisać inne, również tworząc łańcuch&#8230;&#8203;</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/xkcd_signKey.png" alt="xkcd signKey">
+</div>
+<div class="title">Figure 4. jak może wyglądać podpisanie czyjegoś klucza?</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Security advisory, okólnik ds bezpieczeństwa, rady dla bezpieczników </dt>
+<dd>
+<p>specjalne (i zwykle oficjalne!) porady wydawane przez firmy / grupy, które odkryły dziurę, słabość, były przedmiotem ataku lub taki atak podejrzewają, zwykle dobre miejsce by zaktualizować własne procedury zabezpieczające i zrewidować zabezpieczenia czy zmienić sposób audytowania kodu / komponentu</p>
+</dd>
+<dt class="hdlist1">Sól, salt </dt>
+<dd>
+<p>randomized (or not, if done poorly) string of characters (alphanumerical or - preferrably - not) of good enough or longer length, that is added to password</p>
+</dd>
+<dt class="hdlist1">Rainbow tables </dt>
+<dd>
+<p>A rainbow table is a precomputed table for reversing cryptographic hash functions, usually for cracking password hashes. Tables are usually used in recovering the plaintext password, up to a certain length consisting of a limited set of characters.</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="_who_will_attack_you">Who will attack you?</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Script kiddies</p>
+</li>
+<li>
+<p>Anonymous</p>
+</li>
+<li>
+<p>Professionals</p>
+</li>
+<li>
+<p>Bored professionals</p>
+</li>
+<li>
+<p>Army / Intelligence</p>
+</li>
+<li>
+<p>Random, untargeted attacks also happen</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_would_they_attack_you">How would they attack you?</h3>
+<div class="paragraph">
+<p>Through <strong>Exploitable Vulnerability</strong>, usually humans.</p>
+</div>
+<div class="paragraph">
+<p>Using plethora of tools and known vulnerabilities of your entire tech-stack.</p>
+</div>
+<div class="paragraph">
+<p>Through OS, JVM, with ZeroDays or social engineering, whatever may work.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Prepare they&#8217;ll get in.</div>
+<div class="paragraph">
+<p>One omission, one unapplied update or patch. One not known vector of entry. Or one human. That&#8217;s it, they&#8217;re in.<br>
+Don&#8217;t count on it NOT happening, prepare for it happening.<br>
+They can be at it for months. Will you spot it?</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pytania_4">Pytania?</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./img/question-mark.jpg" alt="question mark">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dobre_i_złe_hasła_i_praktyki_z_tym_związane">Dobre i złe hasła i praktyki z tym związane</h2>
+<div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+Passwords are like underwear: don&#8217;t share them, hide them under your keyboard, or hang them from your monitor. Above all, change them frequently
+</blockquote>
+<div class="attribution">
+&#8212; Mexican Hackers Emergency Response Team page<br>
+<cite>on passwords</cite>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/xkcd_password.png" alt="xkcd password">
+</div>
+<div class="title">Figure 5. Jak dobrać hasło?</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+AT RANDOM! Not just any words. Comic walkthrough: <a href="https://stackoverflow.com/questions/26068983/is-a-very-long-alphabetic-password-harder-to-crack-than-a-shorter-password-with" class="bare">https://stackoverflow.com/questions/26068983/is-a-very-long-alphabetic-password-harder-to-crack-than-a-shorter-password-with</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/xkcd_passwordReuse.png" alt="xkcd passwordReuse">
+</div>
+<div class="title">Figure 6. Dlaczego go nie użyć na kilku stronach?</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/xkcd_secQ.png" alt="xkcd secQ">
+</div>
+<div class="title">Figure 7. Humorystycznie o pytaniach bezpieczeństwa</div>
+</div>
+<div class="paragraph">
+<p>PHP7 ma funkcję do tego: <a href="http://php.net/manual/en/book.password.php" class="bare">http://php.net/manual/en/book.password.php</a></p>
+</div>
+<div class="sect2">
+<h3 id="_eksperyment_arsa_łamanie_haseł">Eksperyment Arsa - łamanie haseł</h3>
+<div class="quoteblock">
+<blockquote>
+For Ars, three crackers have at 16,000+ hashed passcodes—with 90 percent success.
+</blockquote>
+<div class="attribution">
+&#8212; Ars Technica<br>
+<cite>https://arstechnica.com/information-technology/2013/05/how-crackers-make-minced-meat-out-of-your-passwords/3/</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>Ars dał 3 ekspertom zbiór 16,449 haseł. Złamali 14,800.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>długość poniżej 6 - złamane w 16 minut.</p>
+</li>
+<li>
+<p>wzorce - wielu ludzi myśli wzorcami, wzorce się łamie składając kawałki z poprzednich włamów lub łańcuchami Markova, vide momof3g8kids</p>
+</li>
+<li>
+<p>nawet mój ulubiony komiks xkcd nie jest gwarancją, choć poradził sobie lepiej niż większość haseł <code>Tr0ub4d0ur</code> owych.</p>
+</li>
+<li>
+<p><code>qeadzcwrsfxv1331</code> jakim wzorcem jest to hasło?</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/hasła_długość.jpg" alt="hasła długość">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_puenta">Puenta?</h3>
+<div class="quoteblock">
+<blockquote>
+<div class="literalblock">
+<div class="content">
+<pre>ror wrote:
+"That means we have 13,000 humans who did not choose a good password."</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>how is Qbesancon321 not a "good" password? It could be strengthened by using a symbol, but sooner or later, Qbe$@ncon321 won't be a good password either. (For all I know, that's already the case).</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>seems like not reusing the same password is more important than strength. even if I have a password that I believe to be "strong", it's still in my best interests to change my password once its hash has been released.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Capital at the beginning, digits at the end, all lowercase in the middle. It&#8217;s a poor password because it&#8217;s using a common pattern. That was the point of the article.</p>
+</div>
+<div class="paragraph">
+<p>Everyone needs to use truly random passwords and, thus, a password manager.</p>
+</div>
+<div class="paragraph">
+<p>Edit: and, no, doing that common symbol substitution makes it no stronger. Again, a common pattern.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; ringlord<br>
+<cite>top comment on that article replying to another commenter</cite>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_czym_dysponowali">Czym dysponowali?</h3>
+<div class="quoteblock">
+<blockquote>
+Using a commodity computer with a single AMD Radeon 7970 graphics card, it took him 20 hours to crack 14,734 of the hashes, a 90-percent success rate.
+</blockquote>
+</div>
+<div class="quoteblock">
+<blockquote>
+unscrambled 13,486 hashes (82 percent) in a little more than one hour, using a slightly more powerful machine that contained two AMD Radeon 6990 graphics cards
+</blockquote>
+</div>
+<div class="quoteblock">
+<blockquote>
+a third cracker who goes by the moniker radix deciphered 62 percent of the hashes using a computer with a single 7970 card—also in about one hour
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Żaden z nich się nie rzucił na to zadanie, wręcz przeciwnie.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ćwiczenie_4">Ćwiczenie</h3>
+<div class="paragraph">
+<p>Oto skróty kilku znanych haseł:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>88e448065396975b684bc87fa5b3d341
+f53e6b090c8a75afc182bd3567203fe6
+dca675382c7f7180f7dc1cca61f4f74d
+456b7016a916a4b178dd72b947c152b7
+9ee000b7c619114c1de0f4be8947575b
+286755fad04869ca523320acce0dc6a4
+f447b20a7fcbf53a5d5be013ea0b15af</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>odszyfruj te hasła!</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Stwórz plik z prostym hasłem (<code>echo hasło &gt; nazwaPliku</code>)</p>
+</li>
+<li>
+<p>Powtórz krok 1 dla kilku haseł, za każdym razem zapisując hasło do nowego pliku</p>
+</li>
+<li>
+<p>wykonaj <code>md5sum nazwaPlikuZHasłem</code></p>
+</li>
+<li>
+<p>alternatywnie, możesz wyjście komendy <code>echo</code> przesłać od razu jako wejście do <code>md5sum</code></p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+uwaga na <code>echo</code> vs <code>echo -n</code>, jeśli chcesz sprawdzić swoje hasło np., to prawdziwy skrót z niego to będzie ten z <code>echo -n</code>. Echo zwykle zostawia znak nowej linii za sobą (<code>\n</code>), który zmienia skrót, powyższe hasła są z nim zapisane. Więcej: <a href="https://security.stackexchange.com/questions/65499/difference-between-os-x-md5-and-gnu-md5sum" class="bare">https://security.stackexchange.com/questions/65499/difference-between-os-x-md5-and-gnu-md5sum</a> lub <a href="http://labs.sasslantis.ee/2011/04/md5sum-vs-md5-different-algorithms/" class="bare">http://labs.sasslantis.ee/2011/04/md5sum-vs-md5-different-algorithms/</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wnioski">Wnioski?</h3>
+<div class="paragraph">
+<p>Zły sposób skracania? Nie do uratowania.<br>
+Brak soli - Cię zaboli.<br>
+Sama sól nie poratuje, gdy nadejdą zbóje.</p>
+</div>
+<div class="paragraph">
+<p><strong>Sól nie ratuje złego algorytmu.</strong></p>
+</div>
+<div class="paragraph">
+<p>GPU wycięły tęczowe tabelki, są skuteczniejsze i poręczniejsze. Niektórzy mają nawet klustry 25GPU. :(</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Wzorce w hasłach ała. Brak soli ała. Hasło już gdzieś złamane i dostępne publicznie ała.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Dobry algorytm! Bcrypt, sha512, PBKDF2&#8230;&#8203;
+</td>
+</tr>
+</table>
+</div>
+<div class="quoteblock">
+<blockquote>
+By contrast, algorithms specifically designed to protect passwords require significantly more time and computation. For instance, the SHA512crypt function included by default in Mac OS X and most Unix-based operating systems passes text through 5,000 hashing iterations. This hurdle would limit the same one-GPU cracking system to slightly less than 2,000 guesses per second. Examples of other similarly "slow" hashing algorithms include bcrypt, scrypt, and PBKDF2.
+</blockquote>
+<div class="attribution">
+&#8212; Ars Technica<br>
+<cite>ten sam artykuł</cite>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_z_perspektywy_programisty">Z perspektywy programisty</h3>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Don&#8217;ts</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Don't limit what characters users can enter for passwords. Only idiots do this.
+Don't limit the length of a password. If your users want a sentence with supercalifragilisticexpialidocious in it, don't prevent them from using it.
+Never store your user's password in plain-text.
+Never email a password to your user except when they have lost theirs, and you sent a temporary one.
+Never, ever log passwords in any manner.
+Never hash passwords with SHA1 or MD5 or even SHA256! Modern crackers can exceed 60 and 180 billion hashes/second (respectively).
+Don't mix bcrypt and with the raw output of hash(), either use hex output or base64_encode it. (This applies to any input that may have a rogue \0 in it, which can seriously weaken security.)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Dos</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Use scrypt when you can; bcrypt if you cannot.
+Use PBKDF2 if you cannot use either bcrypt or scrypt, with SHA2 hashes.
+Reset everyone's passwords when the database is compromised.
+Implement a reasonable 8-10 character minimum length, plus require at least 1 upper case letter, 1 lower case letter, a number, and a symbol. This will improve the entropy of the password, in turn making it harder to crack. (See the "What makes a good password?" section for some debate.)</pre>
+</div>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; Robert K on SO<br>
+<cite>https://stackoverflow.com/a/401684/999165</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>Nie ograniczamy długości hasła, nie wymuszamy losowości tak, by ludzie wymyślali wzorce już znane łamaczom haseł.<br>
+Dobry (bo wolny) algorytm skracania, skrót hasła powinien brać też sól.<br>
+Hasła i sól przechowujemy osobno.<br>
+Sól nie jest ta sama wszędzie, tylko inna wszędzie.<sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup></p>
+</div>
+<div class="sect3">
+<h4 id="_skracanie">Skracanie?</h4>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+nie wymyślajcie koła, skoro Java/JS/PHP/inne ma na to funkcję. :P
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Czy więcej razy tym samym algo czy wiele różnych algo czy tylko raz solić? <a href="https://stackoverflow.com/questions/348109/is-double-hashing-a-password-less-secure-than-just-hashing-it-once" class="bare">https://stackoverflow.com/questions/348109/is-double-hashing-a-password-less-secure-than-just-hashing-it-once</a></p>
+</li>
+<li>
+<p>Ewolucja przechowywania haseł: <a href="https://medium.com/@uther_bendragon/sustainable-password-hashing-8c6bd5de3844" class="bare">https://medium.com/@uther_bendragon/sustainable-password-hashing-8c6bd5de3844</a></p>
+</li>
+<li>
+<p>Dobre omówienie większości konceptów: <a href="https://crackstation.net/hashing-security.htm" class="bare">https://crackstation.net/hashing-security.htm</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dobre_hasła">Dobre hasła?</h3>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Dobre hasło ma odpowiednią entropię (zatem długość, losowość, mix obu), jest dobrze przechowywane, testowane co pewien czas i łatwe do zapamiętania albo zapisane w programie do haseł.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Chcecie mieć dobre hasła, róbcie sami łamanie i mówcie użytkownikom:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>w ramach ćwiczeń antywłamaniowych złamaliśmy Twoje hasło w ciągu x minut. Wymogiem na naszej stronie jest hasło silniejsze niż XYZ.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Periodycznie testujemy nasze zabezpieczenia (a zatem i siłę haseł). Twoje hasło (skrócone, posolone) zostało złamane narzędziem HashCat(link) w ciągu z godzin.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Sprawdzając, czy któreś z haseł użytkowników zostało użyte gdzieś indziej, w znanych incydentach bezpieczeństwa, odkryliśmy, że hasło "..." w rzeczy samej jest znane hakerom. Ponieważ jednym ze standardowych ataków jest atak z listą znanych haseł, prosimy Cię o zmianę hasła.</pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Zrób własne albo użyj <a href="https://haveibeenpwned.com/Passwords" class="bare">https://haveibeenpwned.com/Passwords</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ćwiczenie_5">Ćwiczenie</h3>
+<div class="paragraph">
+<p><strong>Odwiedź haveibeenpwned i sprawdź kilka prostych haseł</strong> - np. z ćwiczenia wcześniej albo swoich dawnych</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pytania_5">Pytania?</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./img/question-mark.jpg" alt="question mark">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rodo">RODO</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">RODO, Rozporządzenie,  </dt>
+<dd>
+<p>Rozporządzenie o Ochronie Danych Osobowych, ustawa aktywna od 25 maja 2018 (kiedy zaczęliście dostawać te wszystkie maile bo wszyscy sobie o Was przypomnieli).</p>
+</dd>
+<dt class="hdlist1">GDPR </dt>
+<dd>
+<p>General Data Protection Regulation, EU law from 2016, prawo rodzicielskie dla rodzimego RODO. To TO SAMO PRAWO, GDPR to angielski skrót.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><a href="https://giodo.gov.pl/pl/file/10574">Ustawa jako PDF</a></p>
+</div>
+<div class="sect2">
+<h3 id="_kalendarium">Kalendarium</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>1995r., Internet w powijakach, w UE przechodzi rezolucja dotycząca danych osobowych</p>
+</li>
+<li>
+<p>1997r., powyższa rezolucja dociera do Polski i skutkuje Ustawą o Ochronie Danych Osobowych, wkrótce przez Internet (już nie w wiadrach noszony) zostawioną w tyle</p>
+</li>
+<li>
+<p>2016r., kwiecień, UE dostosowuje prawo do rzeczywistości, GDPR</p>
+</li>
+<li>
+<p>2018r., maj, Polska wdraża RODO</p>
+</li>
+</ol>
+</div>
+<div class="quoteblock">
+<blockquote>
+W UE do tej pory było tak, że każdy kraj miał swoje rozwiązania jeśli chodzi o ochronę danych i firmy traciły ponad 2 miliardy euro rocznie tylko dlatego, że dokonywały różnego rodzaju operacji związanych z rejestracją danych w poszczególnych unijnych krajach.
+</blockquote>
+<div class="attribution">
+&#8212; Waldek<br>
+<cite>przewodnik po RODO</cite>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dane_osobowe_czyli">Dane osobowe&#8230;&#8203; czyli?</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="quoteblock">
+<div class="title">Dane osobowe, za: <a href="https://encyklopediarodo.pl/definicja-danych-osobowych/" class="bare">https://encyklopediarodo.pl/definicja-danych-osobowych/</a></div>
+<blockquote>
+Dane osobowe to informacje o zidentyfikowanej lub możliwej do zidentyfikowania osobie fizycznej. Możliwa do zidentyfikowania osoba fizyczna to taka, którą można bezpośrednio lub pośrednio zidentyfikować, w szczególności na podstawie identyfikatora takich danych, jak:<br>
+• imię i nazwisko,<br>
+• numer identyfikacyjny,<br>
+• dane o lokalizacji,<br>
+• identyfikator internetowy (np. adres IP),<br>
+• jeden bądź kilka szczególnych czynników, określających: fizyczną, fizjologiczną, genetyczną, psychiczną, ekonomiczną, kulturową lub społeczną tożsamość osoby fizycznej.<br>
+Dodatkowo warto wiedzieć, że RODO wprowadza szerszy zakres danych osobowych, nazywanych szczególnymi kategoriami danych (porównywalne z danymi wrażliwymi), do których należą:<br>
+• pochodzenie rasowe lub etniczne, poglądy polityczne,<br>
+• przekonania religijne lub światopoglądowe,<br>
+• przynależność do związków zawodowych,<br>
+• dane genetyczne oraz dane biometryczne, niezbędne w celu jednoznacznego zidentyfikowania osoby fizycznej, dane dotyczące zdrowia, seksualności lub orientacji seksualnej.<br>
+Całkiem osobno traktowane są informacje o wyrokach skazujących oraz naruszeniach prawa (gdzie jednoznacznie stwierdzono, że można je przetwarzać wyłącznie pod nadzorem władz publicznych lub jeżeli prawo UE lub państwa członkowskiego przewidzi taką możliwość).
+</blockquote>
+<div class="attribution">
+&#8212; Encyklopedia Rodo<br>
+<cite>definicja danych osobowych</cite>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Dane osobowe umożliwiają jednoznaczną identyfikację.
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_przykłady">Przykłady</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Jan Kowalski, Polska - niejednoznaczne</p>
+</li>
+<li>
+<p>KRK69NC - niejednoznaczne</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>w obu przypadkach muszę dochodzić, śledzić, wywiadywać się.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Ale!</p>
+</div>
+<div class="paragraph">
+<p>Jeśli mając daną 'Jan Kowalski', lub tylko 'Jan', mogę:</p>
+</div>
+<div class="paragraph">
+<p><code>SELECT * FROM USERS WHERE imię LIKE 'Jan';</code><br>
+<code>returned 1 row</code></p>
+</div>
+<div class="paragraph">
+<p>O, niespodzianka. Jednoznaczne dla mnie. Czyli, dana osobowa.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+innymi słowy, jeśli dla mnie, z możliwościami, jakie daje mi system, jest możliwe zidentyfikowanie człowieka jednoznacznie, to dla mnie to dana osobowa. Dla napastnika, który dostaje szereg znaczków ale dostępu do systemu nie ma, daną osobową to nie jest.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_duża_zmiana">Duża zmiana!</h3>
+<div class="paragraph">
+<p>Dane osobowe w polskim prawie są w:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Prawie bankowym,</p>
+</li>
+<li>
+<p>Prawie ubezpieczeniowym,</p>
+</li>
+<li>
+<p>Prawie medycznym,</p>
+</li>
+<li>
+<p>Prawie telekomunikacyjnym,</p>
+</li>
+<li>
+<p>Prawie pracy</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Wszystkie te prawa muszą zostać podciągnięte do nowej rzeczywistości. To największa zmiana prawna od&#8230;&#8203; dawna.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prawa">Prawa?</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./img/GDPR.png" alt="GDPR">
+</div>
+<div class="title">Figure 8. Jakie prawa ma obywatel? 1/3</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/GDPR1.png" alt="GDPR1">
+</div>
+<div class="title">Figure 9. Jakie prawa ma obywatel? 2/3</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/GDPR2.png" alt="GDPR2">
+</div>
+<div class="title">Figure 10. Jakie prawa ma obywatel? 3/3</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/RODO_prawaObywateli.jpg" alt="RODO prawaObywateli">
+</div>
+<div class="title">Figure 11. Inna infografika</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ochrona_danych_osobowych">Ochrona danych osobowych</h3>
+<div class="paragraph">
+<p>Przed RODO - papierkologia. Czy spełniłem prawne wymogi? To ok.</p>
+</div>
+<div class="paragraph">
+<p>Teraz, znacznie, ZNACZNIE więcej. Prawdziwa ochrona, drakońskie kary, jednoinstancyjność postępowania. Papierkologia też, ale potem.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_zmiany">Zmiany</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./img/RODO_GIODO.png" alt="RODO GIODO">
+</div>
+<div class="title">Figure 12. GIODO znika: <a href="https://giodo.gov.pl/pl/569/9276" class="bare">https://giodo.gov.pl/pl/569/9276</a></div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>kontrola nad prawami przechodzi na obywateli</p>
+</li>
+<li>
+<p>drakońskie kary, jeśli nie (20 mln EUR bądź 4% dochodów rocznych)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>za wycieki</p>
+</li>
+<li>
+<p>za bezprawne udostępnianie (sprzedałeś pod stołem bazę? ups!)</p>
+</li>
+<li>
+<p>za profilowanie</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Prezes UODO może nakładać kary, jest to teraz najbardziej w tym zakresie uposażona jednostka!</p>
+</li>
+<li>
+<p>im mniej masz danych tym lepiej</p>
+</li>
+<li>
+<p>ochrona przede wszystkim, akcja jak stracisz, papierkologia potem</p>
+</li>
+<li>
+<p>zmiany w interfejsie i funkcjach, musisz umożliwiać szereg rzeczy</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Migracja</div>
+<div class="paragraph">
+<p><a href="https://www.programistaprawnik.pl/ochrona-danych-osobowych/" class="bare">https://www.programistaprawnik.pl/ochrona-danych-osobowych/</a><br>
+<a href="https://techblog.bozho.net/gdpr-practical-guide-developers/" class="bare">https://techblog.bozho.net/gdpr-practical-guide-developers/</a></p>
+</div>
+<div class="paragraph">
+<p>Są już ludzie, którzy mają skrypty i rozwiązania! :-)</p>
+</div>
+<div class="paragraph">
+<p><a href="https://make.wordpress.org/core/tag/gdpr-compliance/" class="bare">https://make.wordpress.org/core/tag/gdpr-compliance/</a><br>
+<a href="https://wordpress.org/plugins/wp-gdpr-core/" class="bare">https://wordpress.org/plugins/wp-gdpr-core/</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.donationcoder.com/forum/index.php?topic=45495.0">And there are free scripts&#8230;&#8203;</a> though how good?</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="quoteblock">
+<div class="title">jak to przeszło/przechodzi na świecie?</div>
+<blockquote>
+<div class="paragraph">
+<p>Facebook utworzył nowe centrum ochrony prywatności (Privacy Basics[24]), które będzie zawierało wszystkie główne ustawienia prywatności w jednym miejscu[25][26][27]. Ze względu na europejskie przepisy, w irlandzkim oddziale Facebooka w Dublinie (Facebook Ireland Limited, to druga obok Facebook Inc spółka Facebooka) miał zostać zatrudniony Deputy Chief Privacy Officer[24]. Osoba, która będzie na tym stanowisku ma mieć pełen dostęp do wszystkich zasobów przedsiębiorstwa, a jej działania mają być nadzorowane bezpośrednio przez Marka Zuckerberga[24]. Jednocześnie ma pozostawać w ciągłym kontakcie z lokalnym organem nadzorczym[24]. Aby wdrożyć GDPR, Facebook zatrudnił setki ludzi (inżynierów, analityków, prawników oraz specjalistów od polityk prywatności i bezpieczeństwa danych), którzy oceniają każdą poszczególną funkcję portalu pod kątem zgodności z jego wymaganiami[24]. Implementacja koncentruje się wokół dwóch kluczowych kwestii: transparentności przetwarzania oraz kontroli użytkownika nad swoimi danymi[24].</p>
+</div>
+<div class="paragraph">
+<p>Amazon rozpoczął ulepszanie szyfrowania danych w swojej usłudze przechowywania w chmurze i uprościł umowę z klientami dotyczącą sposobu przetwarzania ich informacji[26][28]. Google musiało przeprojektować wiele umów dot. zgody, a także zmienić podstawową technologię, aby ułatwić usuwanie danych[26].</p>
+</div>
+<div class="paragraph">
+<p>Japonia w 2017 powołała niezależną agencję zajmującą się skargami dotyczącymi prywatności, aby dostosować się do europejskich standardów (podczas negocjacji w sprawie nowej umowy handlowej między Japonią a UE)[29]. Izrael i Nowa Zelandia należą do kilku międzynarodowych partnerów, którzy zawarli umowy z UE, potwierdzając, że ich przepisy dotyczące ochrony danych są równe tym obowiązującym w Europie[29]. Inne kraje, od Kolumbii, przez Koreę Południową, po Bermudy, podobnie dostosują prawo krajowe[29]. W niektórych przypadkach ma to się odbyć dosłownie[29].</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; Wikipedia<br>
+<cite>RODO: skutki</cite>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+niezła strona do szybkiego odświeżania, bo w stylu P&amp;O: <a href="https://encyklopediarodo.pl" class="bare">https://encyklopediarodo.pl</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pytania_6">Pytania?</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./img/question-mark.jpg" alt="question mark">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dobre_praktyki">Dobre praktyki</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By zabezpieczać, a nie teatr odstawiać, dobrze jest okazjonalnie popatrzeć na szereg dobrych praktyk, zadając sobie pytanie <em>czy je stosuję?</em>, <em>jak często?</em>, <em>na ile to jest zautomatyzowane?</em>. Oto przykładowa lista:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>stosuję wielowarstwową obronę, gdzie współdziała wiele niezależnych komponentów (ang. defense in-depth)</p>
+</li>
+<li>
+<p>dostępy są regulowane na zasadzie minimum uprawnień</p>
+</li>
+<li>
+<p>dostęp do kodu czy serwerów nie jest trywialny</p>
+</li>
+<li>
+<p>bezpieczeństwo jest wbudowane w naszą aplikację, a nie <em>dobudowywane</em> na hurra!</p>
+</li>
+<li>
+<p>nie wytaczam własnego zabezpieczenia sesji, własnych algorytmów, funkcji skrótu itp.,</p>
+</li>
+<li>
+<p>domyślny konfig musi umrzeć</p>
+</li>
+<li>
+<p>moja infrastruktura i kod są przemyślane pod kątem ataków sieciowych</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>WAF, CDN, CP</p>
+</li>
+<li>
+<p>zabezpieczenia serwera WWW, zwykłego,</p>
+</li>
+<li>
+<p>SNMP i monitoring na poziomie sieci,</p>
+</li>
+<li>
+<p>monitoring sięga też do logów</p>
+</li>
+<li>
+<p>wydajność jest ważna</p>
+</li>
+<li>
+<p>nie dam się zabić moim własnym API, mam to przemyślane</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Wersje:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>nowe wersje wszystkiego, albo postępująca migracja na takie</p>
+</li>
+<li>
+<p>automatyczne aktualizacje</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>ręczne elementy aktualizacji są szybko automatyzowane</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>słabości wersji są periodycznie sprawdzane, tak samo haki czy dziury</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>by w razie czego móc zmitygować</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Przypominajka, <strong>hak</strong> to patent na włam lub kod/prototyp potrafiący się włamać. <strong>Dziura</strong> umożliwia włam, jak się ją znajdzie. <strong>Słabizna</strong> sama z siebie nie umożliwia włamu, ale osłabia zabezpieczenia i jak się dziura trafi, to słabizna <em>wchodzi do gry</em> i ją powiększa.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Ludzie:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>szkolenia dla obrońców (pamiętaj definicję obrońcy!)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>mam wewnętrzne programy uświadamiające ludziom jak się można włamać</p>
+</li>
+<li>
+<p>moja praca szkoli z socjotechnik</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>nad bezpieczeństwem czuwa zespół, a nie jeden człowiek</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>ten zespół ma ludzi z różnych warstw (sysadmin, bazodanowiec, itp.)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>celowo atakujemy siebie samych, by w firmie była odpowiednia kultura i by ludzie się wprawiali</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>oraz by pewne niedogodności były uzasadnione ćwiczeniami (mniejsza wygoda itp.)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>podkreślamy że doceniamy, co ludzie robią i znoszą i chwalimy się jacy my to elitarni nie są</p>
+</li>
+<li>
+<p>procedury są znane, opublikowane&#8230;&#8203;</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>ludzie wiedzą gdzie zgłaszać</p>
+</li>
+<li>
+<p>a zgłaszanie jest zautomatyzowane</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Wiedza:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>znam swój łańcuch zabezpieczeń i wiem gdzie jest najsłabsze ogniwo</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>jeśli to możliwe, mam "mapę"</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>mam i oglądam monitoring</p>
+</li>
+<li>
+<p>wiem gdzie szukać okólników ds bezpieczeństwa danego komponentu</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>mam nawet stronę, gdzie wchodzę i mam sznur per komponent (lub sznury jak więcej niż jedno miejsce)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>znam swoje API</p>
+</li>
+<li>
+<p>wiem jak działają moje narzędzia, zwłaszcza te zabezpieczające</p>
+</li>
+<li>
+<p>regularnie czytam okólniki dla bezpieczników,</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>jak jest nowa dziura, szybko o tym wiem</p>
+</li>
+<li>
+<p>jeśli któreś z nich wychodzą regularnie, mam czas na nie odłożony</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Audyty (do wiedzy):</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>mamy audyty kodu, własne i cudze</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>np. przez <a href="https://www.bugcrowd.com/" class="bare">https://www.bugcrowd.com/</a> itp.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>mamy znane sposoby zgłaszania haków, dziur i słabizn</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>bonus jak dajemy za to nagrody! mogą być nieduże</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>odkryte problemy są traktowane priorytetowo</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>każdy kiedyś skrewi, nie ciśniemy znalazcy procesem, nie grozimy mu</p>
+</li>
+<li>
+<p>każdy kiedyś skrewi, <strong>transparentność w tym co dalej jest kluczowa</strong></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>audyty kodu wskazują mi miejsca do modernizacji, gdzie stare rozwiązania można ulepszyć</p>
+</li>
+<li>
+<p>regularnie odpytuję innych jak ich audyty,</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>by wiedzieć,</p>
+</li>
+<li>
+<p>by w razie czego poprawić swoje poletko i nie być najsłabszym ogniwem</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>periodycznie robię ćwiczenie z łamania haseł</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>złamane są wymieniane, ich użytkownicy dostają i cynk i szkolenie</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>shodan, dnsmapper i inne narzędzia</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+jeśli nie wszyscy mają zwiać przed lwem, to ja muszę biec szybciej niż ten najwolniejszy
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Automaty (do wiedzy):</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>mam automaty, które sprawdzają mój kod i próbują się włamać</p>
+</li>
+<li>
+<p>mam wbudowane zabezpieczenia (tak, liczba mnoga!) przed podstawowymi atakami</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>w obrazy maszyn czy kontenerów</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>narzędzia są wpięte w CI/CD</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Hasła:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>dobry algorytm skracania, wolny, ciężki do złamania, dający mi czas na zmiany haseł jak gdzieś wypłyną</p>
+</li>
+<li>
+<p>hasła są solone, skracane, <strong>niejawne</strong>, żadnym otwartym tekstem</p>
+</li>
+<li>
+<p>mądra polityka haseł!</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>długość &gt; 8</p>
+</li>
+<li>
+<p>żaden <em>pożal się Boże standard</em> z dużą i małą literą, cyfrą i znakiem specjalnym</p>
+</li>
+<li>
+<p>BARDZO dobre komunikaty dlaczego dane hasło nie, fakty, linki - edukacja</p>
+</li>
+<li>
+<p>brak pytań bezpieczeństwa</p>
+</li>
+<li>
+<p>przypominanie haseł ma krótko-żyjący kod</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>hasła testujemy pod kątem</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>siły (tudzież: entropii),</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>unikamy sytuacji, gdzie chytry atakujący entropię zredukuje (vide Samy i FB)</p>
+</li>
+<li>
+<p>unikamy sytuacji, gdzie podajemy mocne hasło, jeśli zostało złamane szybciej sprytem (vide LivingSocial)</p>
+</li>
+<li>
+<p>podajemy: na potrzeby entropii hasło jest dość dobre (bądź nie)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>długości</p>
+</li>
+<li>
+<p>czy wyciekły</p>
+</li>
+<li>
+<p>ataków słownikowych</p>
+</li>
+<li>
+<p>ataków kombinacyjnych (dostępnymi narzędziami)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>umożliwiamy dwufazową weryfikację</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>albo jednorazowe hasła czy tokeny, jak YubiKey</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>użytkownicy mojej aplikacji mają kącik bezpieczeństwa: mogą zgłosić problem, sprawdzić istniejące, poczytać poradniki</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>sprawy haseł są wygodne i ustandaryzowane</p>
+</li>
+<li>
+<p>prowadzę ich za rękę</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>zalogowani użytkownicy robiący dziwne rzeczy są monitorowani i informowani innymi kanałami o "swoich" poczynaniach</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>zakładam, że przeglądarka może zostać przejęta</p>
+</li>
+<li>
+<p>zakładam, że można na moment siąść do czyjegoś kompa i zerknąć w jego menedżera haseł, lub po prostu jako on się zalogować</p>
+</li>
+<li>
+<p>polecam moim użytkownikom takie rozwiązania, jak <code>KeePass</code>, czy <code>LastPass</code> czy <code>pass</code></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>mając SSO, dbam o swoją bazę!</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+najlepiej: nie przejmuję się hasłami! deleguję autentykację i autoryzację do innych, którzy mają lepsze możliwości (OAuth)
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_ludzie_łamią_dobre_praktyki">Ludzie łamią dobre praktyki</h3>
+<div class="paragraph">
+<p>bo im z nimi niewygodnie. Rada: balansuj!</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+If you&#8217;re not uncomfortable, you&#8217;re not secure.
+</blockquote>
+<div class="attribution">
+&#8212; PostgreSQL OpSec
+</div>
+</div>
+<div class="paragraph">
+<p>Ale pociśnij za daleko (za częste zmiany haseł, za częste aktualizacje ręczne) i ludzie machną na to ręką.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_najsłabsze_ogniwo">Najsłabsze ogniwo</h3>
+<div class="quoteblock">
+<blockquote>
+Hackers always focus on the weakest link in security chain.
+</blockquote>
+<div class="attribution">
+&#8212; Pete Lindstrom
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+People often represent the weakest link in the security chain and are chronically responsible for the failure of security systems.
+</blockquote>
+<div class="attribution">
+&#8212; Bruce Schneier
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/WeakestLink.jpg" alt="WeakestLink">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Niekoniecznie to człowiek!</div>
+<div class="paragraph">
+<p>Najsłabszym ogniwem nie zawsze będzie człowiek&#8230;&#8203; choć nieraz tak jest.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/SecurityAwarenessDave.jpg" alt="SecurityAwarenessDave">
+</div>
+</div>
+<div class="paragraph">
+<p>Twoje zabezpieczenia <a href="http://www.cisco.com/cisco/web/solutions/small_business/resource_center/articles/secure_my_business/as_strong_as_the_weakest_link/index.html">są tak mocne jak najsłabsze z nich</a>, czy to zapora, antywir, sieć, apka czy co inne.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="title">Zasada zachowania energii czyni z nas notorycznych leni</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>zmiana hasła</p>
+</li>
+<li>
+<p>praca nie z roota</p>
+</li>
+<li>
+<p>aktualizacja wersji</p>
+</li>
+<li>
+<p>wylogowanie się</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/xkcd_logout.jpg" alt="xkcd logout">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+zasada minimalnych uprawnień: jak tylko nie potrzebujesz ekstra uprawnień, porzuć je.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+załóż, że włamanie się do Ciebie jest tak proste, jak zabranie komuś laptopa i wykorzystanie menedżera haseł w przeglądarce na moment. Monitoruj zalogowanych.
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_socjotechniki">Socjotechniki</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Nie zawsze złe: śmietnik w parku, pianino na schodach</p>
+</li>
+<li>
+<p>Bardzo ludzkie: otwieranie komuś drzwi, lub po prostu przytrzymanie ich</p>
+</li>
+<li>
+<p>graliście w captchę?</p>
+</li>
+<li>
+<p>tłumaczenia i poprawki tychże, czyli "budowanie swojego słownika"</p>
+</li>
+<li>
+<p>zostawione USB, ot leży na podłodze, ale może 8GB?</p>
+</li>
+<li>
+<p>Phishing</p>
+</li>
+<li>
+<p>Mail od <a href="mailto:Piotr.Konieczny@niebzpiecznik.pl">Piotr.Konieczny@niebzpiecznik.pl</a>, przecież zaufacie</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>jak bawicie się SMTP to czasem zbyt mała różnica może wpędzić w kłopoty!</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Telefon od (potencjalnego) klienta</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/NotAliceBob.jpeg" alt="NotAliceBob">
+</div>
+</div>
+<div class="paragraph">
+<p>Socjotechniki są w nas wbudowane, to słabość, której się nie pozbędziemy. Uświadamianie, Uświadamianie, Uświadamianie!</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+super jest, kiedy socjotechnika działa na Twoją korzyść! Ale ciężko by działała regularnie lub ustawicznie. :(
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_problemów_jest_wiele_2">Problemów jest wiele</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>liczy się wszystko</p>
+</li>
+<li>
+<p>zaufanie to łańcuch</p>
+</li>
+<li>
+<p>najsłabsze ogniwo</p>
+</li>
+<li>
+<p>bezpieczeństwo jako dobudówka do apki</p>
+</li>
+<li>
+<p>oglądanie się na innych, socjotechniki</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Dlatego wielu poprzestaje na teatrze.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ale_ja_chcę_bezpieczeństwa_2">Ale ja chcę bezpieczeństwa!</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Wiedza </dt>
+<dd>
+<p>wiedz, że coś się dzieje! ;-) Wiedz gdzie działać i co robić.</p>
+</dd>
+<dt class="hdlist1">Podejście holistyczne </dt>
+<dd>
+<p>nie tylko apka i zależności, całość. Wiedza (świadomość) i akcje muszą być holistyczne.</p>
+</dd>
+<dt class="hdlist1">Wbudowanie </dt>
+<dd>
+<p>w proces, w aplikację, w ludzi</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Ćwicz! Sam funduj sobie ataki by wszyscy ich oczekiwali i uważali za naturalne.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_źródła">Źródła</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tomasz Borek, blog: <a href="http://lafkblogs.wordpress.com" class="bare">http://lafkblogs.wordpress.com</a></p>
+</li>
+<li>
+<p>Ankieta po-szkoleniowa: <a href="https://bit.ly/2JGxWNS" class="bare">https://bit.ly/2JGxWNS</a></p>
+</li>
+<li>
+<p>doświadczenia własne</p>
+</li>
+<li>
+<p>szkolenia własne i cudze (np. Niebezpiecznika)</p>
+</li>
+<li>
+<p><a href="https://www.owasp.org/" class="bare">https://www.owasp.org/</a></p>
+</li>
+<li>
+<p><a href="http://php.net/manual/" class="bare">http://php.net/manual/</a></p>
+</li>
+<li>
+<p>różne pytania i odpowiedzi ze StackOverflow i Information Security</p>
+</li>
+<li>
+<p>Security Dojo: DVWA, SamuraiDojo, Metasploit, Kali Linux, Web Security Dojo, Web Goat, Gryuere</p>
+</li>
+<li>
+<p>Nagrania z konferencji: PHP UK 2016, PHP Scotland, Confidence</p>
+</li>
+<li>
+<p>Liczne blogi branżowe</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Skala i teatr</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://info.whitehatsec.com/rs/675-YBI-674/images/WHS%202017%20Application%20Security%20Report%20FINAL.pdf" class="bare">https://info.whitehatsec.com/rs/675-YBI-674/images/WHS%202017%20Application%20Security%20Report%20FINAL.pdf</a></p>
+</li>
+<li>
+<p><a href="https://info.whitehatsec.com/rs/675-YBI-674/images/WH-2016-Stats-Report-FINAL.pdf" class="bare">https://info.whitehatsec.com/rs/675-YBI-674/images/WH-2016-Stats-Report-FINAL.pdf</a></p>
+</li>
+<li>
+<p><a href="https://www.ptsecurity.com/upload/corporate/ww-en/analytics/WebApp-Vulnerabilities-2017-Q4-eng.pdf" class="bare">https://www.ptsecurity.com/upload/corporate/ww-en/analytics/WebApp-Vulnerabilities-2017-Q4-eng.pdf</a></p>
+</li>
+<li>
+<p><a href="https://www.ptsecurity.com/upload/corporate/ww-en/analytics/WebApp-Attacks-2017-eng.pdf" class="bare">https://www.ptsecurity.com/upload/corporate/ww-en/analytics/WebApp-Attacks-2017-eng.pdf</a><br>
+<a href="https://www.slideshare.net/xsist10/security-theatre-scotland-php" class="bare">https://www.slideshare.net/xsist10/security-theatre-scotland-php</a></p>
+</li>
+<li>
+<p><a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=693&amp;redir=1" class="bare">https://bugs.chromium.org/p/project-zero/issues/detail?id=693&amp;redir=1</a></p>
+</li>
+<li>
+<p><a href="https://lock.cmpxchg8b.com/sophailv2.pdf" class="bare">https://lock.cmpxchg8b.com/sophailv2.pdf</a></p>
+</li>
+<li>
+<p><a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=675&amp;redir=1" class="bare">https://bugs.chromium.org/p/project-zero/issues/detail?id=675&amp;redir=1</a></p>
+</li>
+<li>
+<p><a href="https://www.visioncritical.com/internet-of-things-stats/" class="bare">https://www.visioncritical.com/internet-of-things-stats/</a></p>
+</li>
+<li>
+<p><a href="https://www.statista.com/statistics/471264/iot-number-of-connected-devices-worldwide/" class="bare">https://www.statista.com/statistics/471264/iot-number-of-connected-devices-worldwide/</a></p>
+</li>
+<li>
+<p><a href="https://www.shodan.io/search?query=apache+php" class="bare">https://www.shodan.io/search?query=apache+php</a></p>
+</li>
+<li>
+<p><a href="http://xkcd.com/" class="bare">http://xkcd.com/</a></p>
+</li>
+<li>
+<p><a href="http://heartbleed.com/" class="bare">http://heartbleed.com/</a></p>
+</li>
+<li>
+<p><a href="https://heartbleedheader.com/" class="bare">https://heartbleedheader.com/</a></p>
+</li>
+<li>
+<p><a href="https://www.shodan.io/report/89bnfUyJ" class="bare">https://www.shodan.io/report/89bnfUyJ</a></p>
+</li>
+<li>
+<p><a href="https://www.openssl.org/news/secadv/20140407.txt" class="bare">https://www.openssl.org/news/secadv/20140407.txt</a></p>
+</li>
+<li>
+<p><a href="https://github.com/search?q=define%28%27SECURE_AUTH_KEY%27%29&amp;type=Code" class="bare">https://github.com/search?q=define%28%27SECURE_AUTH_KEY%27%29&amp;type=Code</a></p>
+</li>
+<li>
+<p><a href="https://medium.freecodecamp.org/discovering-the-hidden-mine-of-credentials-and-sensitive-information-8e5ccfef2724" class="bare">https://medium.freecodecamp.org/discovering-the-hidden-mine-of-credentials-and-sensitive-information-8e5ccfef2724</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Zabezpieczenia:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="http://php.net/manual/en/function.eval.php" class="bare">http://php.net/manual/en/function.eval.php</a></p>
+</li>
+<li>
+<p><a href="http://php.net/manual/en/reference.pcre.pattern.modifiers.php#reference.pcre.pattern.modifiers.eval" class="bare">http://php.net/manual/en/reference.pcre.pattern.modifiers.php#reference.pcre.pattern.modifiers.eval</a></p>
+</li>
+<li>
+<p><a href="http://php.net/manual/en/function.preg-replace.php" class="bare">http://php.net/manual/en/function.preg-replace.php</a></p>
+</li>
+<li>
+<p><a href="http://php.net/manual/en/function.preg-replace-callback.php" class="bare">http://php.net/manual/en/function.preg-replace-callback.php</a></p>
+</li>
+<li>
+<p><a href="https://security.szurek.pl/exploit-bypass-php-escapeshellarg-escapeshellcmd.html" class="bare">https://security.szurek.pl/exploit-bypass-php-escapeshellarg-escapeshellcmd.html</a></p>
+</li>
+<li>
+<p><a href="https://security.szurek.pl/exploit-bypass-php-escapeshellarg-escapeshellcmd.html#known-bypassesexploits" class="bare">https://security.szurek.pl/exploit-bypass-php-escapeshellarg-escapeshellcmd.html#known-bypassesexploits</a></p>
+</li>
+<li>
+<p><a href="http://php.net/manual/en/function.exec.php" class="bare">http://php.net/manual/en/function.exec.php</a></p>
+</li>
+<li>
+<p><a href="http://php.net/manual/en/function.file.php#Notes" class="bare">http://php.net/manual/en/function.file.php#Notes</a>]</p>
+</li>
+<li>
+<p><a href="http://php.net/manual/en/filesystem.configuration.php#ini.allow-url-fopen" class="bare">http://php.net/manual/en/filesystem.configuration.php#ini.allow-url-fopen</a></p>
+</li>
+<li>
+<p><a href="http://php.net/manual/en/function.fopen.php" class="bare">http://php.net/manual/en/function.fopen.php</a></p>
+</li>
+<li>
+<p><a href="http://php.net/manual/en/wrappers.php" class="bare">http://php.net/manual/en/wrappers.php</a></p>
+</li>
+<li>
+<p><a href="http://php.net/manual/en/function.file.php#Notes" class="bare">http://php.net/manual/en/function.file.php#Notes</a></p>
+</li>
+<li>
+<p><a href="http://www.php.net/manual/en/ini.core.php#ini.open-basedir" class="bare">http://www.php.net/manual/en/ini.core.php#ini.open-basedir</a></p>
+</li>
+<li>
+<p><a href="http://php.net/manual/en/ini.core.php#ini.include-path" class="bare">http://php.net/manual/en/ini.core.php#ini.include-path</a></p>
+</li>
+<li>
+<p><a href="http://php.net/manual/en/ini.core.php#ini.include-path" class="bare">http://php.net/manual/en/ini.core.php#ini.include-path</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Żargon</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://wiki.php.net/rfc/mysql_deprecation" class="bare">https://wiki.php.net/rfc/mysql_deprecation</a></p>
+</li>
+<li>
+<p><a href="https://wiki.php.net/rfc/remove_deprecated_functionality_in_php7#extmysql" class="bare">https://wiki.php.net/rfc/remove_deprecated_functionality_in_php7#extmysql</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Ataki DDOS:</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+polecam <a href="http://www.digitalattackmap.com/faq/" class="bare">http://www.digitalattackmap.com/faq/</a> by poczytać o obronie, atakach, skąd dane itp.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="http://www.digitalattackmap.com/understanding-ddos/" class="bare">http://www.digitalattackmap.com/understanding-ddos/</a></p>
+</li>
+<li>
+<p><a href="https://www.computerweekly.com/news/252434746/Europe-in-the-firing-line-of-evolving-DDoS-attacks" class="bare">https://www.computerweekly.com/news/252434746/Europe-in-the-firing-line-of-evolving-DDoS-attacks</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/IP_fragmentation" class="bare">https://en.wikipedia.org/wiki/IP_fragmentation</a></p>
+</li>
+<li>
+<p><a href="https://www.cisco.com/c/en/us/support/docs/ip/generic-routing-encapsulation-gre/25885-pmtud-ipfrag.html#anc3" class="bare">https://www.cisco.com/c/en/us/support/docs/ip/generic-routing-encapsulation-gre/25885-pmtud-ipfrag.html#anc3</a></p>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/questions/2779198/benefits-of-dont-fragment-on-tcp-packets" class="bare">https://stackoverflow.com/questions/2779198/benefits-of-dont-fragment-on-tcp-packets</a></p>
+</li>
+<li>
+<p><a href="https://securelist.com/ddos-attacks-in-q3-2017/83041/" class="bare">https://securelist.com/ddos-attacks-in-q3-2017/83041/</a> - DDOSy w K3 2017</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Sławne DDOSy omówione:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>z interaktywną grafiką: <a href="http://www.digitalattackmap.com/gallery/" class="bare">http://www.digitalattackmap.com/gallery/</a></p>
+</li>
+<li>
+<p><a href="https://www.cw.com.hk/security/popvote-attack-aftermath" class="bare">https://www.cw.com.hk/security/popvote-attack-aftermath</a> - postmortem referendum hongkongskiego</p>
+</li>
+<li>
+<p><a href="https://www.theregister.co.uk/2016/09/26/google_shields_krebs/" class="bare">https://www.theregister.co.uk/2016/09/26/google_shields_krebs/</a> - atak na stronę Krebbsa</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Ochrona przed DDOSem:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://en.wikipedia.org/wiki/DDoS_mitigation" class="bare">https://en.wikipedia.org/wiki/DDoS_mitigation</a></p>
+</li>
+<li>
+<p><a href="https://www.slideshare.net/SucuriSecurity/kludges-and-php-why-should-you-use-a-waf" class="bare">https://www.slideshare.net/SucuriSecurity/kludges-and-php-why-should-you-use-a-waf</a></p>
+</li>
+<li>
+<p>Wideo do prezki powyżej: <a href="https://www.youtube.com/watch?v=zKHdFiQ7E50" class="bare">https://www.youtube.com/watch?v=zKHdFiQ7E50</a></p>
+</li>
+<li>
+<p><a href="https://www.soyoustart.com/pl/anti-ddos.xml" class="bare">https://www.soyoustart.com/pl/anti-ddos.xml</a></p>
+</li>
+<li>
+<p><a href="https://dnsdumpster.com" class="bare">https://dnsdumpster.com</a></p>
+</li>
+<li>
+<p>zlewy DNSowe (ang. DNS sinks)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Polska a DDOS?</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://www.cert.pl/en/news/single/ddos-against-polish-government-websites/" class="bare">https://www.cert.pl/en/news/single/ddos-against-polish-government-websites/</a></p>
+</li>
+<li>
+<p><a href="https://www.reuters.com/article/us-poland-lot-cybercrime/polish-airline-hit-by-cyber-attack-says-all-carriers-are-at-risk-idUSKBN0P21DC20150622" class="bare">https://www.reuters.com/article/us-poland-lot-cybercrime/polish-airline-hit-by-cyber-attack-says-all-carriers-are-at-risk-idUSKBN0P21DC20150622</a></p>
+</li>
+<li>
+<p><a href="https://jamestown.org/program/russias-hybrid-war-against-poland/" class="bare">https://jamestown.org/program/russias-hybrid-war-against-poland/</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Ataki:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://www.youtube.com/watch?v=Jgd1LT8yEaA" class="bare">https://www.youtube.com/watch?v=Jgd1LT8yEaA</a></p>
+</li>
+<li>
+<p><a href="https://youtu.be/AuNwk\-\-lfxU" class="bare">https://youtu.be/AuNwk\-\-lfxU</a> - kodowanie w PDFie wymogło, by każdy <code>-</code> poprzedzić <code>\</code>, usuń <code>\</code> nim skorzystasz z linki</p>
+</li>
+<li>
+<p><a href="https://pl.wikipedia.org/wiki/Cross-site_request_forgery" class="bare">https://pl.wikipedia.org/wiki/Cross-site_request_forgery</a></p>
+</li>
+<li>
+<p><a href="http://shiflett.org/blog/2007/my-amazon-anniversary" class="bare">http://shiflett.org/blog/2007/my-amazon-anniversary</a></p>
+</li>
+<li>
+<p><a href="http://4diggers.blogspot.com/" class="bare">http://4diggers.blogspot.com/</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery" class="bare">https://en.wikipedia.org/wiki/Cross-site_request_forgery</a></p>
+</li>
+<li>
+<p><a href="https://www.computerweekly.com/tip/Cross-site-request-forgery-Lessons-from-a-CSRF-attack-example" class="bare">https://www.computerweekly.com/tip/Cross-site-request-forgery-Lessons-from-a-CSRF-attack-example</a></p>
+</li>
+<li>
+<p><a href="https://haacked.com/archive/2009/04/02/anatomy-of-csrf-attack.aspx/" class="bare">https://haacked.com/archive/2009/04/02/anatomy-of-csrf-attack.aspx/</a></p>
+</li>
+<li>
+<p><a href="https://blog.qualys.com/webappsec/2017/01/26/cross-site-request-forgery-what-happened-to-the-sleeping-giant" class="bare">https://blog.qualys.com/webappsec/2017/01/26/cross-site-request-forgery-what-happened-to-the-sleeping-giant</a></p>
+</li>
+<li>
+<p><a href="https://cve.mitre.org/cve/identifiers/" class="bare">https://cve.mitre.org/cve/identifiers/</a></p>
+</li>
+<li>
+<p><a href="https://www.incapsula.com/web-application-security/csrf-cross-site-request-forgery.html" class="bare">https://www.incapsula.com/web-application-security/csrf-cross-site-request-forgery.html</a></p>
+</li>
+<li>
+<p><a href="https://www.blackhat.com/presentations/bh-usa-06/BH-US-06-Gallagher.pdf" class="bare">https://www.blackhat.com/presentations/bh-usa-06/BH-US-06-Gallagher.pdf</a><br>
+.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Zabezpieczenia:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="http://www.cisco.com/cisco/web/solutions/small_business/resource_center/articles/secure_my_business/as_strong_as_the_weakest_link/index.html" class="bare">http://www.cisco.com/cisco/web/solutions/small_business/resource_center/articles/secure_my_business/as_strong_as_the_weakest_link/index.html</a></p>
+</li>
+<li>
+<p><a href="https://www.bugcrowd.com/" class="bare">https://www.bugcrowd.com/</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>RODO:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://encyklopediarodo.pl/" class="bare">https://encyklopediarodo.pl/</a></p>
+</li>
+<li>
+<p><a href="https://rodotechnologia.pl/co-to-jest-rodo-gdpr/" class="bare">https://rodotechnologia.pl/co-to-jest-rodo-gdpr/</a></p>
+</li>
+<li>
+<p><a href="https://pl.wikipedia.org/wiki/Og%C3%B3lne_rozporz%C4%85dzenie_o_ochronie_danych" class="bare">https://pl.wikipedia.org/wiki/Og%C3%B3lne_rozporz%C4%85dzenie_o_ochronie_danych</a></p>
+</li>
+<li>
+<p><a href="https://giodo.gov.pl/pl/569/9276" class="bare">https://giodo.gov.pl/pl/569/9276</a></p>
+</li>
+<li>
+<p><a href="http://www.konferencje24h.pl/rodo-w-praktyce-_4577.php" class="bare">http://www.konferencje24h.pl/rodo-w-praktyce-_4577.php</a></p>
+</li>
+<li>
+<p><a href="https://codecanyon.net/item/gdpr-pro-complete-eu-compliant-integration/21533656" class="bare">https://codecanyon.net/item/gdpr-pro-complete-eu-compliant-integration/21533656</a></p>
+</li>
+<li>
+<p><a href="https://techblog.bozho.net/gdpr-practical-guide-developers/" class="bare">https://techblog.bozho.net/gdpr-practical-guide-developers/</a></p>
+</li>
+<li>
+<p><a href="http://www.donationcoder.com/forum/index.php?topic=45495.0" class="bare">http://www.donationcoder.com/forum/index.php?topic=45495.0</a></p>
+</li>
+<li>
+<p><a href="https://make.wordpress.org/core/tag/gdpr-compliance/" class="bare">https://make.wordpress.org/core/tag/gdpr-compliance/</a></p>
+</li>
+<li>
+<p><a href="https://wordpress.org/plugins/wp-gdpr-core/" class="bare">https://wordpress.org/plugins/wp-gdpr-core/</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Hasła:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Objaśnienie komiksu XKCD o entropii i zapamiętywalności haseł: <a href="https://stackoverflow.com/questions/26068983/is-a-very-long-alphabetic-password-harder-to-crack-than-a-shorter-password-with" class="bare">https://stackoverflow.com/questions/26068983/is-a-very-long-alphabetic-password-harder-to-crack-than-a-shorter-password-with</a></p>
+</li>
+<li>
+<p>PHP7 i hasła: <a href="http://php.net/manual/en/book.password.php" class="bare">http://php.net/manual/en/book.password.php</a></p>
+</li>
+<li>
+<p>Ars Technica, eksperyment z łamaniem haseł: <a href="https://arstechnica.com/information-technology/2013/05/how-crackers-make-minced-meat-out-of-your-passwords/3/" class="bare">https://arstechnica.com/information-technology/2013/05/how-crackers-make-minced-meat-out-of-your-passwords/3/</a>]</p>
+</li>
+<li>
+<p>SO o dobrych i anty praktykach przy hasłach: <a href="https://stackoverflow.com/a/401684/999165" class="bare">https://stackoverflow.com/a/401684/999165</a></p>
+</li>
+<li>
+<p>Sól: <a href="https://en.wikipedia.org/wiki/Salt_(cryptography" class="bare">https://en.wikipedia.org/wiki/Salt_(cryptography</a>)]</p>
+</li>
+<li>
+<p>Czy więcej razy tym samym algo czy wiele różnych algo czy tylko raz solić? <a href="https://stackoverflow.com/questions/348109/is-double-hashing-a-password-less-secure-than-just-hashing-it-once" class="bare">https://stackoverflow.com/questions/348109/is-double-hashing-a-password-less-secure-than-just-hashing-it-once</a></p>
+</li>
+<li>
+<p>Ewolucja przechowywania haseł: <a href="https://medium.com/@uther_bendragon/sustainable-password-hashing-8c6bd5de3844" class="bare">https://medium.com/@uther_bendragon/sustainable-password-hashing-8c6bd5de3844</a></p>
+</li>
+<li>
+<p>Dobre omówienie większości konceptów: <a href="https://crackstation.net/hashing-security.htm" class="bare">https://crackstation.net/hashing-security.htm</a></p>
+</li>
+<li>
+<p><a href="https://haveibeenpwned.com/Passwords" class="bare">https://haveibeenpwned.com/Passwords</a></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dziękuję">Dziękuję!</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./img/SagesLogo.png" alt="SagesLogo">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/LAFK_pl.png" alt="LAFK pl">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/question-mark.jpg" alt="question mark">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. Krebs on Security, albo crypting w G.
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. <a href="https://twitter.com/Korni22/status/982188465352687618" class="bare">https://twitter.com/Korni22/status/982188465352687618</a>
+</div>
+<div class="footnote" id="_footnotedef_3">
+<a href="#_footnoteref_3">3</a>. <a href="https://medium.com/@sslsecurity/top-5-trustworthy-ssl-certificate-authorities-worldwide-25eeb6d4e8c1" class="bare">https://medium.com/@sslsecurity/top-5-trustworthy-ssl-certificate-authorities-worldwide-25eeb6d4e8c1</a>
+</div>
+<div class="footnote" id="_footnotedef_4">
+<a href="#_footnoteref_4">4</a>. <a href="https://www.sba-research.org/wp-content/uploads/publications/SSL.pdf" class="bare">https://www.sba-research.org/wp-content/uploads/publications/SSL.pdf</a>
+</div>
+<div class="footnote" id="_footnotedef_5">
+<a href="#_footnoteref_5">5</a>. <a href="https://en.wikipedia.org/wiki/Certificate_authority#Implementation_weakness_of_the_trusted_third_party_scheme" class="bare">https://en.wikipedia.org/wiki/Certificate_authority#Implementation_weakness_of_the_trusted_third_party_scheme</a>
+</div>
+<div class="footnote" id="_footnotedef_6">
+<a href="#_footnoteref_6">6</a>. Więcej o soli: <a href="https://en.wikipedia.org/wiki/Salt_(cryptography" class="bare">https://en.wikipedia.org/wiki/Salt_(cryptography</a>)
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2019-10-25 07:11:02 CEST
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
+</body>
+</html>
