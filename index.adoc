@@ -17,6 +17,16 @@ a kami dwelling
 . http://lafk.pl/Prezki/TDD.html[DDD] for Brainly Camp 2019
 . http://lafk.pl/Prezki/SoftwareCraftsmanship.html[Software Craftsmanship] for Brainly Camp 2019
 . http://lafk.pl/Prezki/ZmianaPracy.html[O zmianie pracy z obu stron barykady] dla JDD 2019
+. http://lafk.pl/Prezki/JMM.html[Java Memory Model (ENG)] for JDD 2019
+. http://lafk.pl/Prezki/ZmianaPracy.html[O zmianie pracy z obu stron barykady] dla JDD 2019
+
+=== Older presos
+
+. http://www.lafk.pl/advanced-testing-Java-preso/Zaawansowane%20Testowanie.html#/start
+. https://github.com/LIttleAncientForestKami/JDD-2013-talk
+. https://github.com/LIttleAncientForestKami/advanced-testing-Java-preso
+. https://github.com/LIttleAncientForestKami/jdk9-on-jdd
+. https://github.com/LIttleAncientForestKami/JDayLviv-ThreadDumpsOnJVM
 
 == About me
 
