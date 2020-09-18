@@ -18,7 +18,7 @@ a kami dwelling
 . http://lafk.pl/Prezki/SoftwareCraftsmanship.html[Software Craftsmanship] for Brainly Camp 2019
 . http://lafk.pl/Prezki/ZmianaPracy.html[O zmianie pracy z obu stron barykady] dla JDD 2019
 . http://lafk.pl/Prezki/JMM.html[Java Memory Model (ENG)] for JDD 2019
-. http://lafk.pl/Prezki/gc9-14.4dev.html[GC 9-14 new algos (PL)] for 4Dev 2020
+. http://lafk.pl/Prezki/gc9-15.4dev.html[GC 9-15 new algos (PL)] for 4Dev 2020
 
 === Older presos
 
