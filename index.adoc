@@ -22,6 +22,7 @@ a kami dwelling
 . http://lafk.pl/Prezki/gc9-15.html[GC 9-15 new algos (PL)] for Warsaw JUG 2020 (extended with more slides and Q&A)
 . http://lafk.pl/Prezki/Anonymous.html[Anonymous in the IT crowd] for JDD keynote 2020
 . http://lafk.pl/Prezki/Tools-worth-knowing.html[Tools worth knowing (EN)] for 4Dev 2021 
+. http://lafk.pl/Prezki/MongoDB-a-sceptic-view.html[MongoDB - a sceptic's view (EN)] for JDD 2021 
 
 === Older presos
 
