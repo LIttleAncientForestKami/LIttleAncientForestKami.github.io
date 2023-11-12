@@ -13,20 +13,20 @@ a kami dwelling
 
 == My presos
 
-. http://lafk.pl/Prezki/TDD.html[TDD]
-. http://lafk.pl/Prezki/DDD.html[DDD] for Brainly Camp 2019
-. http://lafk.pl/Prezki/SoftwareCraftsmanship.html[Software Craftsmanship] for Brainly Camp 2019
-. http://lafk.pl/Prezki/ZmianaPracy.html[O zmianie pracy z obu stron barykady] dla JDD 2019
-. http://lafk.pl/Prezki/JMM.html[Java Memory Model (ENG)] for JDD 2019
-. http://lafk.pl/Prezki/gc9-15.4dev.html[GC 9-15 new algos (PL)] for 4Dev 2020
-. http://lafk.pl/Prezki/gc9-15.html[GC 9-15 new algos (PL)] for Warsaw JUG 2020 (extended with more slides and Q&A)
-. http://lafk.pl/Prezki/Anonymous.html[Anonymous in the IT crowd] for JDD keynote 2020
-. http://lafk.pl/Prezki/Tools-worth-knowing.html[Tools worth knowing (EN)] for 4Dev 2021 
-. http://lafk.pl/Prezki/MongoDB-a-sceptic-view.html[MongoDB - a sceptic's view (EN)] for JDD 2021 
+. https://lafk.pl/Prezki/TDD.html[TDD]
+. https://lafk.pl/Prezki/DDD.html[DDD] for Brainly Camp 2019
+. https://lafk.pl/Prezki/SoftwareCraftsmanship.html[Software Craftsmanship] for Brainly Camp 2019
+. https://lafk.pl/Prezki/ZmianaPracy.html[O zmianie pracy z obu stron barykady] dla JDD 2019
+. https://lafk.pl/Prezki/JMM.html[Java Memory Model (ENG)] for JDD 2019
+. https://lafk.pl/Prezki/gc9-15.4dev.html[GC 9-15 new algos (PL)] for 4Dev 2020
+. https://lafk.pl/Prezki/gc9-15.html[GC 9-15 new algos (PL)] for Warsaw JUG 2020 (extended with more slides and Q&A)
+. https://lafk.pl/Prezki/Anonymous.html[Anonymous in the IT crowd] for JDD keynote 2020
+. https://lafk.pl/Prezki/Tools-worth-knowing.html[Tools worth knowing (EN)] for 4Dev 2021 
+. https://lafk.pl/Prezki/MongoDB-a-sceptic-view.html[MongoDB - a sceptic's view (EN)] for JDD 2021 
 
 === Older presos
 
-. http://www.lafk.pl/advanced-testing-Java-preso/Zaawansowane%20Testowanie.html#/start
+. https://lafk.pl/advanced-testing-Java-preso/Zaawansowane%20Testowanie.html#/start
 . https://github.com/LIttleAncientForestKami/JDD-2013-talk
 . https://github.com/LIttleAncientForestKami/advanced-testing-Java-preso
 . https://github.com/LIttleAncientForestKami/jdk9-on-jdd
@@ -45,3 +45,7 @@ TIP: Kotek, PacMan, JBird na Amstradzie, Miś na ElWro Juniorze, no i na PC XT: 
 == Jobs
 
 I work as a trainer (among others) since 2013. https://LIttleAncientForestKami.github.io/katalogSzkoleń.html[Here's a list of trainings I can do (in Polish only for now)]
+
+== Technologies I use
+
+for now only in Polish: https://lafk.pl/tech/tech.html

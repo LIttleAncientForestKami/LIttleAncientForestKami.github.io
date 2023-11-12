@@ -1,0 +1,97 @@
+:version: 1
+== Technologia jakiej używam
+
+Przede wszystkim Linux. To zasługuje na osobną podsekcję.
+
+*Asciidoctor* dla dokumentacji, prezentacji, własnych zapisków. Mam tu osobne repozytorium: https://github.com/LIttleAncientForestKami/pokaz-adoca
+
+Hosting: DigitalOcean, niegdyś Heroku (dopóki był free tier, bo małe cusie tam miałem), OVH oraz Mikrus. Strony GitHuba (niniejsza strona np.) oraz GitLaba - kronika jedna RPGowa moja.
+
+=== System: GNU/Linux
+
+Dystrybucje: najczęściej Ubuntu i warianty. Bezpiecznikowo: Kali Linux i Maven Security Dojo.
+Zarządzanie oknami: Gnome, AwesomeWM, ostatnio eksperymentuję z Waylandem.
+Powłoka: Bash, ZSH samodzielny lub z `oh-my-zsh`, ostatnio Bash+synth shell.
+
+Poza standardem, jak `bash`, `vim`, `awk`, `grep`, `find` i wiele innych, mam tu wiele programów, jakie lubię i staram się mieć i zwykle doinstalowuję:
+
+Zaczynam od:
+
+. vim-gtk3 - bo schowek
+. git - bo etckeeper
+. etckeeper - git do obsługi plików /etc
+
+Potem jedzie reszta, jak już jest etckeeper:
+
+. sysstat - vmstat, iostat i inne dobroci
+. mupdf - lekki, na skrótach VIMa, do PDFów
+. unzip - przydaje się, poza tym SDKman potrzebuje
+. meld - Pythonowe, dobre do rozwiązywania konflików lub porównywania plików po prostu
+. dos2unix - jak ktoś na Windzie wrzuci pliki...
+. tree - drzewo katalogów powinno być drzewem w niektórych momentach
+. htop - top z kolorami i nieco prostszym interfejsem (atop to inny  fajny wybór)
+. atop - bo to zbiera dane cały czas, a nie jak htop - tylko w momencie wywołania
+. fonts-powerline - czcionki
+. fonts-font-awesome - czcionki, Asciidoctora ikonki
+. ffmpeg - kombajn do obsługi wideo
+. screenkey - z Waylandem nie działa, dobre do pokazywania, który klawisz wciskam
+. byzanz - nagrywa ekrany do gifa, sprzed asciinema i lżejszy, ale nie pod Waylanda
+. webp-pixbuf-loader - obsługa webp przez domyślną przeglądarkę obrazów
+. xclip - schowek z konsoli, przydatne w skryptach
+. inxi - jeden program by wiedzieć co i gdzie mam, dobry trik to `-xxx` by mieć 3 poziomy ekstra informacji w temacie
+. jq - parsowanie jsona z linii poleceń
+. pass - git i pgp do zarządzania hasłami, fajne, proste, skuteczne, konsolowe
+. tldr - man, ale destylowany do kilku przykładów
+. vifm - ortodoksyjny program do plików, jak Norton Commander... na skrótach Vima
+. sdkman - i JVMowe SDKi programy mają prostą instalację
+. asdf - głównie dla prostej instalacji Node.js i NPMa
+. flatpak - prosta instalacja wielu programów
+. gnome-software-plugin-flatpak - by Gnome sobie radził z flatpakiem i się integrował
+. snap - Ubuntu przepycha, ma swoje plusy np. bezpiecznikowo
+. podman - zamiast Dockera, bezpieczniejsze, szybsze, lepsza architektura, do tego `alias docker=podman`
+. net-tools - diagnostyka i nie tylko
+. nmap - skaner portów, sieci, urządzeń...
+. curl - klient HTTP z konsoli, super-znany i często ma przykłady w dokumentacji API
+. wget - j.w.
+. httpie - j.w., najprostszy w obsłudze, najnowszy, mam 3, bo jakby 1 był zablokowany...
+. wireshark - analiza ruchu sieciowego
+. shellcheck - wynajduje przyszłe błędy w skryptach
+. moreutils - dodatkowe narzędzia, jak np. sponge
+. stress - zestresowanie komputera kiedy on mnie stresuje ;) (wydajnościowe, wielowątkowe testy)
+. autojump - by zapisywać historię katalogów i móc po nich skakać przez `j fragmentNazwy`
+. batcat - jak cat, ale na skrzydłach ;-), `alias bat=batcat`
+. lynis - utwardzanie systemu
+. rkhunter - szuka "rootkitów"
+. needrestart - jak aktualizujesz system, sprawdza co trzeba zrestartować, przydatne bezpiecznikowo, konfiguracyjnie i nie tylko
+
+=== Programistycznie:
+
+Python3, Java, JS, Intellij IDEA, PyCharm, WebStorm
+
+Git, GitHub CLI, GitHub dependabot.
+
+Sekrety: git secret, git secrets.
+
+Budowa: Bash, Maven, make, npm, pip, Jenkins, GitLab Pipelines, GitHub Actions.
+
+Prowiza maszyn i nie tylko, wdrażanie: VirtualBox, Vagrant, Docker, Ansible.
+
+=== Usługi
+
+. JetBrains IDE - mam wersje komercyjne.
+. Manning - księgarnia on-line, traktuję jak bibliotekę.
+. Digital Ocean - hosting.
+
+=== Przeglądarka
+
+Głównie Firefox, z racji na rozszerzenia:
+
+. Tridactyl
+. uBlock Origin
+. SuperAgent - cookie consent
+. eksperymentalnie:
+.. Mind the time
+.. Better YT summary
+.. Summarize the internet
+
+_Wersja: {version}_
