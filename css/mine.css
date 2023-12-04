@@ -1,0 +1,51 @@
+html {
+  /* a bit overkill, I won't use that many colours for now at least...
+   * perhaps a colour scheme instead? https://css-tricks.com/almanac/properties/c/color-scheme/ 
+   * also to consider, seasonal palette: https://www.color-hex.com/color-palette/36138
+   * and perhaps this: https://www.bram.us/2021/04/28/create-a-color-theme-with-css-relative-color-syntax-css-color-mix-and-css-color-contrast/
+   * For colours: https://github.com/wesbos/css-colours-sorted
+   */
+  --background:	#ffffff;
+  --background-alt:	#fff6e6;
+  --primary:	#294C60;
+  --primary-contrast:	#ffffff;
+  --accent:	#fca05d;
+  --color:	#001b2e;
+  --danger:	#c52b2b;
+  --shadow:	#b8cfdd;
+  --border:	#afbac0;
+  background-color: var(--background);
+  color: var(--color);
+}
+
+:where(h1,h2,h3,h4,h5,h6) {
+  text-align: center;
+  color: var(--primary);
+}
+
+h1 {
+  margin: 0;
+  padding: 1rem;
+  box-shadow: 0px, 5px, 5px, var(--shadow);
+}
+
+main > section:nth-child(odd) {
+  background-color: var(--background-alt);
+}
+
+.control-error {
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: .9rem;
+    color: var(--danger);
+}
+
+:where(a:link, a:visited) {
+    text-decoration: underline dotted var(--accent);
+    text-underline-offset: 3px;
+}
+
+:where(a:link, a:visited) {
+    text-decoration: underline solid var(--primary);
+    text-underline-offset: 3px;
+}
