@@ -18,14 +18,16 @@ a kami dwelling
 . https://lafk.pl/Prezki/SoftwareCraftsmanship.html[Software Craftsmanship] for Brainly Camp 2019
 . https://lafk.pl/Prezki/ZmianaPracy.html[O zmianie pracy z obu stron barykady] dla JDD 2019
 . https://lafk.pl/Prezki/JMM.html[Java Memory Model (ENG)] for JDD 2019
-. https://lafk.pl/Prezki/gc9-15.4dev.html[GC 9-15 new algos (PL)] for 4Dev 2020
-. https://lafk.pl/Prezki/gc9-15.html[GC 9-15 new algos (PL)] for Warsaw JUG 2020 (extended with more slides and Q&A)
+. https://lafk.pl/Prezki/gcPoJ9.html[GC after Java 9, in PL for Polish JUG 2024]
 . https://lafk.pl/Prezki/Anonymous.html[Anonymous in the IT crowd] for JDD keynote 2020
 . https://lafk.pl/Prezki/Tools-worth-knowing.html[Tools worth knowing (EN)] for 4Dev 2021 
 . https://lafk.pl/Prezki/MongoDB-a-sceptic-view.html[MongoDB - a sceptic's view (EN)] for JDD 2021 
 
 === Older presos
 
+. GC 9-15, new algos:
+.. https://lafk.pl/Prezki/gc9-15.4dev.html[PL for 4Dev 2020]
+.. https://lafk.pl/Prezki/gc9-15.html[PL for Warsaw JUG 2020 (extended with more slides and Q&A)]
 . https://lafk.pl/advanced-testing-Java-preso/Zaawansowane%20Testowanie.html#/start
 . https://github.com/LIttleAncientForestKami/JDD-2013-talk
 . https://github.com/LIttleAncientForestKami/advanced-testing-Java-preso
