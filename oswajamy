@@ -1,7 +1,6 @@
 #!/bin/bash
 
-sudo apt install git etckeeper
-sudo apt install vim-gtk3
+sudo apt install git etckeeper vim-gtk3
 
 for p in sysstat procps iotop htop atop stress siege inxi meld tree pstree unar unzip zip curl terminator xclip xsel pass jq shellcheck; do
         sudo apt install $p;
