@@ -1,8 +1,6 @@
 Git
 Git dla zaawansowanych
 Maven
-Ant
-Gradle
 Archeologia projektu
 Znajdowanie wady projektu - metody praktyczne
 Archi-kata
@@ -12,19 +10,16 @@ Analiza wydajności aplikacji Java
 TDD
 Rekrutacja dla rekruterów
 Jak zrekrutować tych dobrych
-React.js
-Node.js
 Hibernate ORM
-Bezpieczeństwo aplikacji webowych
+Niskopoziomowa Java
 Dobre RESTy
 Wprowadzenie do REST
 Wprowadzenie do Hibernate
 Wprowadzenie do Springa
 Pisanie mikrousług w Springu
 Spring Data - lepsza persystencja
-Wydajność aplikacji - od sprzętu po web
-Niskopoziomowa Java
 Wildfly - administracja, konfiguracja, strojenie
+Wydajność aplikacji - od sprzętu po web
 Tworzenie dobrych prezentacji
 Zwinne metodyki programowania (Agile)
 Konstruktywna krytyka, jak dawać i przyjmować (feedback give-and-take)
@@ -43,3 +38,8 @@ Zabezpieczanie aplikacji Javovych
 Jak pisać bezpieczny kod w Javie
 Oswoić GNU/Linuxa - przydatne jednolinijkowce i swoboda poruszania się po systemie
 Wprowadzenie do sieci - jak to działa, co tam się dzieje
+Bezpieczeństwo aplikacji webowych - tylko przez NBZP
+Programowanie defensywne - tylko przez NBZP
+Bezpieczeństwo w testowaniu aplikacji - tylko przez NBZP
+React.js
+Node.js
